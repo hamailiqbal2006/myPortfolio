@@ -26,7 +26,14 @@ export function EditorialFloatingNav() {
     const navLinks = Array.from(nav.querySelectorAll<HTMLAnchorElement>('[data-nav-link]'));
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const context = gsap.context(() => {
+
+    // The markup is intentionally visible before this client-side enhancement
+    // runs. If motion is unavailable, the homepage must remain usable.
+    if (reducedMotion) return;
+
+    let context: gsap.Context | undefined;
+    try {
+      context = gsap.context(() => {
       // 1. Initial State: At scroll = 0, ONLY Hero identity is visible.
       // Buttons below Hero are hidden and navbar is hidden.
       if (heroButtons) {
@@ -106,49 +113,7 @@ export function EditorialFloatingNav() {
         onRefresh: syncActiveSection,
       });
 
-      // 3. Reduced Motion Handling
-      if (reducedMotion) {
-        if (heroButtons) {
-          gsap.set(heroButtons, { autoAlpha: 1, y: 0, scale: 1, pointerEvents: 'auto' });
-        }
-
-        const show = () => {
-          gsap.to(heroIdentity, { autoAlpha: 0, duration: 0.18, overwrite: true });
-          gsap.to(nav, {
-            autoAlpha: 1,
-            backgroundColor: 'rgba(8,9,9,0.58)',
-            borderColor: 'rgba(242,240,234,0.18)',
-            backdropFilter: 'blur(14px)',
-            borderRadius: '1.75rem',
-            scaleX: 1,
-            scaleY: 1,
-            y: 0,
-            duration: 0.18,
-            overwrite: true,
-          });
-          if (navMeta) gsap.to(navMeta, { autoAlpha: 1, y: 0, duration: 0.18, overwrite: true });
-          if (navLinksContainer) gsap.to(navLinksContainer, { autoAlpha: 1, y: 0, duration: 0.18, overwrite: true });
-          gsap.set(nav, { pointerEvents: 'auto' });
-        };
-
-        const hide = () => {
-          gsap.to(heroIdentity, { autoAlpha: 1, duration: 0.18, overwrite: true });
-          gsap.to(nav, { autoAlpha: 0, scaleX: 0.96, scaleY: 0.94, y: -4, duration: 0.18, overwrite: true });
-          if (navMeta) gsap.to(navMeta, { autoAlpha: 0, y: -4, duration: 0.18, overwrite: true });
-          if (navLinksContainer) gsap.to(navLinksContainer, { autoAlpha: 0, y: 8, duration: 0.18, overwrite: true });
-          gsap.set(nav, { pointerEvents: 'none' });
-        };
-
-        ScrollTrigger.create({
-          trigger: opening,
-          start: 'bottom 24%',
-          onEnter: show,
-          onLeaveBack: hide,
-        });
-        return;
-      }
-
-      // 4. Coordinated GSAP Scroll-linked Timeline
+      // 3. Coordinated GSAP Scroll-linked Timeline
       const morph = gsap.timeline({
         defaults: { ease: 'none' },
         scrollTrigger: {
@@ -202,9 +167,18 @@ export function EditorialFloatingNav() {
           .set(navLinksContainer, { pointerEvents: 'auto' }, 0.66)
           .set(nav, { pointerEvents: 'auto' }, 0.66);
       }
-    });
+      });
+    } catch {
+      // If a browser or extension prevents animation setup, clear every
+      // partially-applied inline state and keep the server-rendered controls usable.
+      context?.revert();
+      gsap.set([heroIdentity, heroButtons, nav, navMeta, navLinksContainer].filter(Boolean), {
+        clearProps: 'all',
+      });
+      return;
+    }
 
-    return () => context.revert();
+    return () => context?.revert();
   }, []);
 
   const handleNavigation = (event: MouseEvent<HTMLAnchorElement>, id: string) => {

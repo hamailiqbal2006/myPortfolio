@@ -1706,6 +1706,28 @@
    RESPONSIVE — MOBILE (<=768px)
    ================================================== */
 @media (max-width: 768px) {
+  .heroSection {
+    height: 100svh;
+    min-height: 100svh;
+    padding: 0 1.25rem;
+  }
+
+  .heroEyebrow {
+    font-size: clamp(0.64rem, 2.2vw, 0.74rem);
+    margin-bottom: 0.85rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.7rem, 13vw, 5.4rem);
+    line-height: 0.82;
+  }
+
+  .heroCopy {
+    font-size: clamp(0.66rem, 2.5vw, 0.82rem);
+    margin-top: 1.25rem;
+    max-width: 22rem;
+  }
+
   .storefrontVisualContainer,
   .productsVisualContainer,
   .checkoutVisualContainer,
