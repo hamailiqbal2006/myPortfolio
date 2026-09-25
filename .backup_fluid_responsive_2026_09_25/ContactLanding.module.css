@@ -27,15 +27,12 @@
   font-family: inherit;
   font-size: clamp(0.75rem, 0.86vw, 0.92rem);
   font-weight: 650;
-  left: clamp(1.25rem, 3.5vw, 4rem);
+  left: clamp(2rem, 3.5vw, 4rem);
   letter-spacing: 0.14em;
   line-height: 1;
   margin: 0;
-  max-width: calc(100vw - clamp(2.5rem, 5vw, 5rem));
-  overflow: hidden;
   padding: 0 clamp(0.6rem, 1vw, 0.9rem);
   position: absolute;
-  text-overflow: ellipsis;
   text-transform: uppercase;
   top: clamp(1.15rem, 2.1vw, 2.25rem);
   transform: translateY(-50%);
@@ -44,7 +41,7 @@
 }
 
 .heroFrameLabel {
-  font-size: clamp(0.95rem, 1.35vw, 1.45rem);
+  font-size: clamp(1rem, 1.35vw, 1.45rem);
   font-weight: 650;
   letter-spacing: 0.10em;
 }
@@ -162,10 +159,10 @@
 
 .heroHeadline {
   color: var(--scene-ink);
-  font-size: clamp(2.4rem, 7.6vw, 8.4rem);
+  font-size: clamp(3.2rem, 7.6vw, 8.4rem);
   font-weight: 700;
   letter-spacing: -0.06em;
-  line-height: 0.88;
+  line-height: 0.85;
   margin: 0;
   max-width: 14ch;
   position: relative;
@@ -600,24 +597,5 @@
   .footerNavDivider {
     font-size: 0.72rem;
     opacity: 0.3;
-  }
-}
-
-/* ==================================================
-   RESPONSIVE — LANDSCAPE PHONE (SHORT VIEWPORT)
-   ================================================== */
-@media (orientation: landscape) and (max-height: 500px) {
-  .heroSection {
-    min-height: auto;
-    padding-bottom: 2rem;
-  }
-
-  .sceneContent {
-    min-height: auto;
-    padding: 3rem clamp(1.25rem, 3.5vw, 2.5rem) 2rem;
-  }
-
-  .faqSection {
-    padding: 3rem clamp(1.25rem, 3.5vw, 2.5rem);
   }
 }

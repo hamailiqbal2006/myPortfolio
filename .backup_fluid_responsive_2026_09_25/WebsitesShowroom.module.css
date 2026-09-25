@@ -765,9 +765,9 @@
 .bizBoardTitle {
   color: var(--paper);
   font-family: inherit;
-  font-size: clamp(0.65rem, 0.8vw, 0.85rem);
+  font-size: clamp(0.72rem, 0.8vw, 0.85rem);
   font-weight: 600;
-  letter-spacing: clamp(0.06em, 0.5vw, 0.14em);
+  letter-spacing: 0.14em;
 }
 
 .bizHeaderNav {
@@ -1711,11 +1711,8 @@
 @media (max-width: 1024px) {
   .footerNavLink {
     min-height: 44px;
-    min-width: 44px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.55rem;
   }
 
   .serviceCover {
@@ -1877,21 +1874,21 @@
   }
 
   .restPlate {
-    height: clamp(9.5rem, 30vw, 12.5rem);
+    height: 11.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(9.5rem, 30vw, 12.5rem);
+    width: 11.5rem;
   }
 
   .restFork {
-    height: clamp(7rem, 22vw, 9rem);
-    left: calc(50% - clamp(5.5rem, 18vw, 7.8rem));
+    height: 8.5rem;
+    left: calc(50% - 7.5rem);
     transform: translateY(-50%);
   }
 
   .restSpoon {
-    height: clamp(7rem, 22vw, 9.5rem);
-    left: calc(50% + clamp(5.5rem, 18vw, 7.8rem));
+    height: 8.5rem;
+    left: calc(50% + 7.5rem);
     transform: translateY(-50%);
   }
 
@@ -1903,10 +1900,10 @@
   .bizBoardMain {
     height: auto;
     left: 50%;
-    padding: clamp(0.75rem, 2.5vw, 1.25rem);
+    padding: 1rem 1.15rem;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: min(92%, 24rem);
+    width: 90%;
   }
 
   .bizBoardSecondary,
@@ -1924,7 +1921,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(10.5rem, 34vw, 14.5rem);
+    width: 13rem;
   }
 
   .bookCalPlane,
@@ -1940,8 +1937,8 @@
   }
 
   .clockBezel {
-    height: clamp(7.5rem, 24vw, 9.5rem);
-    width: clamp(7.5rem, 24vw, 9.5rem);
+    height: 8.5rem;
+    width: 8.5rem;
   }
 
   .bookSlotFocal {
@@ -1949,7 +1946,7 @@
     padding: 0.65rem 1.1rem;
     top: 75%;
     transform: translateX(-50%);
-    width: clamp(8.5rem, 28vw, 11rem);
+    width: 10rem;
   }
 
   .valueSection {
@@ -1996,10 +1993,8 @@
   .footerNavLink {
     align-items: center;
     display: inline-flex;
-    justify-content: center;
     min-height: 44px;
-    min-width: 44px;
-    padding: 0.5rem 0.55rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .footerCopyright {
@@ -2036,36 +2031,5 @@
     position: relative;
     top: auto;
     transform: none !important;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .heroSection {
-    min-height: 100svh;
-    padding: 2.5rem clamp(1.25rem, 3vw, 2.5rem) 1.5rem;
-  }
-
-  .serviceCover {
-    min-height: 100svh;
-    padding: 1.5rem clamp(1.25rem, 3vw, 2.5rem);
-  }
-
-  .coverBody {
-    gap: 1.5rem;
-    grid-template-columns: 45% 55%;
-  }
-
-  .coverTitle {
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 0.88;
-  }
-
-  .coverVisualCol {
-    height: clamp(12rem, 65vh, 18rem);
-  }
-
-  .valueSection,
-  .ctaSection {
-    padding: 3rem clamp(1.25rem, 3vw, 2.5rem);
   }
 }

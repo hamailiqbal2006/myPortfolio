@@ -23,16 +23,13 @@
   box-sizing: border-box;
   color: var(--scene-ink);
   font-family: inherit;
-  font-size: clamp(0.92rem, 1.35vw, 1.45rem);
+  font-size: clamp(1rem, 1.35vw, 1.45rem);
   font-weight: 650;
-  left: clamp(1.25rem, 2.5vw, 3.5rem);
+  left: clamp(2rem, 3vw, 3.5rem);
   letter-spacing: 0.10em;
   line-height: 1;
   margin: 0;
-  max-width: calc(100vw - clamp(2.5rem, 5vw, 5rem));
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 clamp(0.55rem, 1vw, 1.15rem);
+  padding: 0 clamp(0.75rem, 1.2vw, 1.15rem);
   position: absolute;
   text-transform: uppercase;
   top: clamp(1.15rem, 2.1vw, 2.25rem);
@@ -55,14 +52,11 @@
   font-family: inherit;
   font-size: clamp(0.72rem, 0.82vw, 0.86rem);
   font-weight: 600;
-  left: clamp(1.25rem, 2.5vw, 3.5rem);
+  left: clamp(2rem, 3vw, 3.5rem);
   letter-spacing: 0.12em;
   line-height: 1;
   margin: 0;
-  max-width: calc(100vw - clamp(2.5rem, 5vw, 5rem));
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 0 clamp(0.45rem, 0.8vw, 0.85rem);
+  padding: 0 clamp(0.6rem, 1vw, 0.85rem);
   position: absolute;
   text-transform: uppercase;
   top: clamp(1.15rem, 2.1vw, 2.25rem);
@@ -486,8 +480,6 @@
   line-height: 1.05;
   margin: 0;
   text-transform: uppercase;
-  overflow-wrap: break-word;
-  word-break: normal;
 }
 
 .educationDetail {
@@ -990,11 +982,8 @@
   }
   .footerNavLink {
     min-height: 44px;
-    min-width: 44px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.5rem;
   }
   .heroFrameLabel {
     font-size: clamp(0.95rem, 1.3vw, 1.25rem);
@@ -1111,9 +1100,7 @@
     font-size: 0.75rem;
   }
   .educationTitle {
-    font-size: clamp(1.15rem, 5vw, 1.75rem);
-    overflow-wrap: break-word;
-    word-break: normal;
+    font-size: clamp(1.2rem, 5.2vw, 1.75rem);
   }
   .educationDetail {
     font-size: clamp(0.88rem, 3.5vw, 1rem);
@@ -1161,44 +1148,12 @@
     font-size: clamp(0.72rem, 2.8vw, 0.8rem);
     letter-spacing: 0.08em;
     min-height: 44px;
-    min-width: 44px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.35rem;
   }
   .footerNavDivider {
     font-size: 0.72rem;
     opacity: 0.3;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .sceneContent {
-    min-height: auto;
-    padding: 2.25rem clamp(1.25rem, 3vw, 2.5rem);
-  }
-  .depthWrapper {
-    min-height: auto;
-  }
-  .whoBody,
-  .learningBody,
-  .howBody,
-  .websiteBody,
-  .shopifyBody,
-  .buildForBody {
-    margin: 1.25rem 0;
-    padding: 0;
-  }
-  .heroHeadline {
-    font-size: clamp(2.2rem, 6.5vw, 3.8rem);
-  }
-  .whoStatement,
-  .experienceStatement,
-  .shopifyStatement {
-    font-size: clamp(2rem, 5.5vw, 3.2rem);
-  }
-  .contactHeading {
-    font-size: clamp(2.4rem, 6.5vw, 3.8rem);
   }
 }

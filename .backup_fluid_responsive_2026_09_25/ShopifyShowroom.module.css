@@ -629,12 +629,11 @@
 
 .storePlaneBannerTitle {
   color: var(--paper);
-  font-size: clamp(0.85rem, 1.3vw, 1.35rem);
+  font-size: clamp(1rem, 1.3vw, 1.35rem);
   font-weight: 650;
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin: 0;
-  overflow-wrap: break-word;
   text-transform: uppercase;
 }
 
@@ -849,11 +848,10 @@
 
 .prodBoxPriTitle {
   color: var(--paper);
-  font-size: clamp(0.85rem, 1.4vw, 1.45rem);
+  font-size: clamp(1.1rem, 1.4vw, 1.45rem);
   font-weight: 650;
   letter-spacing: -0.01em;
   margin: 0 0 0.5rem;
-  overflow-wrap: break-word;
   text-transform: uppercase;
 }
 
@@ -1087,11 +1085,10 @@
 
 .cartBagTitle {
   color: var(--paper);
-  font-size: clamp(0.85rem, 1.25vw, 1.15rem);
+  font-size: 1.15rem;
   font-weight: 650;
   letter-spacing: -0.01em;
   margin: 0 0 0.4rem;
-  overflow-wrap: break-word;
   text-transform: uppercase;
 }
 
@@ -1691,14 +1688,10 @@
     width: 90%;
   }
 
-  .footerNavLink,
-  .ctaEditorialLink {
+  .footerNavLink {
     min-height: 44px;
-    min-width: 44px;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 0.55rem;
   }
 }
 
@@ -1852,53 +1845,20 @@
   .footerNavLink {
     align-items: center;
     display: inline-flex;
-    justify-content: center;
     min-height: 44px;
-    min-width: 44px;
-    padding: 0.5rem 0.55rem;
-  }
-
-  .ctaEditorialLink {
-    min-height: 44px;
+    padding: 0.5rem 0.35rem;
   }
 }
 
-/* ==================================================
-   RESPONSIVE — LANDSCAPE PHONE (SHORT VIEWPORT)
-   ================================================== */
-@media (orientation: landscape) and (max-height: 500px) {
-  .heroSection {
-    min-height: 100svh;
-    padding: 3rem clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+@media (max-width: 430px) {
+  .storePlaneBannerTitle {
+    font-size: 0.95rem;
   }
-
-  .coversStage {
-    height: 100svh;
+  .prodBoxPriTitle {
+    font-size: 0.88rem;
   }
-
-  .serviceCover {
-    height: 100svh;
-    padding: 1.5rem clamp(1.25rem, 4vw, 2.5rem);
-  }
-
-  .coverBody {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    height: calc(100svh - 4.5rem);
-    align-items: center;
-  }
-
-  .storefrontVisualContainer,
-  .productsVisualContainer,
-  .checkoutVisualContainer,
-  .operationsVisualContainer {
-    height: calc(100svh - 5.5rem);
-  }
-
-  .sellingSection,
-  .ctaSection {
-    min-height: 100svh;
-    padding: 3rem clamp(1.25rem, 4vw, 2.5rem);
+  .cartBagTitle {
+    font-size: 0.92rem;
   }
 }
 

@@ -470,26 +470,3 @@
     padding: 0.4rem 0.2rem;
   }
 }
-
-/* ==================================================
-   RESPONSIVE — LANDSCAPE PHONE (SHORT VIEWPORT)
-   ================================================== */
-@media (orientation: landscape) and (max-height: 500px) {
-  .page {
-    padding: 1.25rem clamp(1rem, 3vw, 2.5rem);
-  }
-
-  .backNav {
-    margin-bottom: 1rem;
-  }
-
-  .header {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .formCard {
-    padding: 1.25rem clamp(1rem, 2vw, 1.5rem);
-    margin-bottom: 1.5rem;
-  }
-}

@@ -36,7 +36,7 @@
   .opening { height:128svh; min-height:480px; }
   .heroStage { min-height:100svh; }
   .heroEyebrow { font-size:clamp(.62rem,2.15vw,.72rem); letter-spacing:.13em; margin-bottom:.85rem; }
-  .name { font-size:clamp(3.1rem,16.5vw,7.5rem); }
+  .name { font-size:clamp(3.8rem,17vw,7.5rem); }
   .heroTagline { font-size:clamp(.58rem,2.35vw,.72rem); letter-spacing:.045em; line-height:1.25; margin-top:1rem; max-width:22rem; padding:0 .5rem; }
   .heroButtons { background:transparent !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border:none !important; border-radius:0 !important; box-shadow:none !important; flex-wrap:wrap; gap:.5rem; margin-top:1.4rem; max-width:20rem; outline:none !important; }
   .heroButton { font-size:.66rem; min-height:44px; padding:.65rem 1.1rem; display:inline-flex; align-items:center; justify-content:center; }
@@ -48,8 +48,8 @@
   .navDesktopLabel { display:none; }
   .navMobileLabel { display:inline; }
   .divider { margin-bottom:3.4rem; }
-  .scene { height:min(135vw,36rem); min-height:28rem; }
-  .scene h2 { font-size:clamp(2.2rem,11vw,4.8rem); line-height:.82; overflow-wrap:break-word; }
+  .scene { height:135vw; min-height:33rem; }
+  .scene h2 { font-size:clamp(3rem,12vw,4.8rem); line-height:.8; overflow-wrap:break-word; }
   .sceneFoot { align-items:flex-start; flex-direction:column; gap:1.25rem; }
   .sceneFoot p { max-width:15rem; }
   .scene::after { inset:18% 6%; }
@@ -58,12 +58,5 @@
   .contactBody { min-height:calc(78svh - 10rem); }
   .creditLine { padding-bottom:env(safe-area-inset-bottom); }
 }
-@media (orientation:landscape) and (max-height:500px) {
-  .heroStage { min-height:100svh; padding:2rem 0 1rem; }
-  .floatingNav { flex-direction:row; min-height:3.25rem; padding:.4rem 1.25rem; top:max(.5rem,env(safe-area-inset-top)); width:calc(100vw - 2rem); }
-  .floatingNavMeta { font-size:.68rem; text-align:left; }
-  .floatingNavLinks { width:auto; gap:1rem; }
-  .floatingNavLink { min-height:44px; padding:.35rem .65rem; }
-  .scene { height:auto; min-height:85svh; }
-}
+@media (max-width:380px) { .scene h2 { font-size:clamp(2.1rem,10.5vw,3rem); } }
 @media (prefers-reduced-motion:reduce) { .scene::before,.scene::after,.explore { transition:none; } }

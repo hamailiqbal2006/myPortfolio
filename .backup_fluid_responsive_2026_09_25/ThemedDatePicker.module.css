@@ -81,8 +81,7 @@
   padding: 1rem;
   position: absolute;
   top: 100%;
-  width: min(19rem, calc(100vw - 3rem));
-  max-width: calc(100vw - 3rem);
+  width: 19rem;
   z-index: 95;
 }
 
