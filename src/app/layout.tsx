@@ -3,6 +3,8 @@ import { Inter_Tight } from 'next/font/google';
 import './globals.css';
 import { SmoothScroll } from '@/components/motion/SmoothScroll';
 
+const publicBasePath = process.env.GITHUB_ACTIONS === 'true' ? '/myPortfolio' : '';
+
 const interTight = Inter_Tight({
   variable: '--font-inter-tight',
   subsets: ['latin'],
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: `${publicBasePath}/favicon.ico`,
   },
 };
 
