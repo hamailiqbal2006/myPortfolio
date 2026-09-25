@@ -1,0 +1,78 @@
+:root {
+  /* Surface & Canvas Colors */
+  --bg-canvas: #060608;
+  --bg-surface: #0e0e13;
+  --bg-elevated: #15151d;
+  
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-prominent: rgba(255, 255, 255, 0.25);
+
+  /* Typography Colors */
+  --text-primary: #f5f5f7;
+  --text-secondary: #9ea3ae;
+  --text-muted: #5d636f;
+
+  /* Material Accents (Restrained Metallic / Graphite Palette) */
+  --metal-highlight: #e5e7eb;
+  --metal-mid: #9ca3af;
+  --metal-dark: #374151;
+
+  /* Layout Spacing */
+  --header-height: 4.5rem;
+  --gutter-mobile: 1.25rem;
+  --gutter-desktop: 3rem;
+
+  /* Viewport Safe Insets */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* Base resets & overflow containment */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom restrained selection */
+::selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 3px;
+}
+
+/* Utility to ensure 3D canvas stays behind HTML overlay */
+.experience-canvas-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.experience-ui-overlay {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}

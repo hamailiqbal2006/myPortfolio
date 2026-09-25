@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  transpilePackages: ['three'],
+  async redirects() {
+    return [
+      {
+        source: '/apps',
+        destination: '/websites',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

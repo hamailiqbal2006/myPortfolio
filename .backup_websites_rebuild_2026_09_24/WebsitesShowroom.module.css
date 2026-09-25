@@ -1,0 +1,1790 @@
+@charset "UTF-8";
+
+/* ==================================================
+   WEBSITE DEVELOPMENT SHOWROOM — EDITORIAL PORTFOLIO SYSTEM
+   Visually aligned with Homepage typography, tuned tracking, and warm neutral darks.
+   ================================================== */
+.page {
+  --bg: #080909;
+  --paper: #f4f3ee;
+  --text-secondary: rgba(244, 243, 238, 0.70);
+  --text-muted: rgba(244, 243, 238, 0.45);
+  --hairline: rgba(242, 240, 234, 0.14);
+  --hairline-subtle: rgba(242, 240, 234, 0.08);
+
+  /* Surface Hierarchy (Warm Neutral Darks) */
+  --surface-base: #131312;
+  --surface-raised: #1a1918;
+  --surface-deep: #0d0e0e;
+
+  /* Material Accents */
+  --mat-warm-stone: #c8beb0;
+  --mat-walnut: #9e8c76;
+  --mat-paper: #dcd8cf;
+  --mat-steel: #b5b9be;
+
+  background: var(--bg);
+  box-sizing: border-box;
+  color: var(--paper);
+  min-height: 100vh;
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+}
+
+/* ==================================================
+   TOP HEADER NAVIGATION
+   ================================================== */
+.header {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  left: clamp(1.5rem, 5vw, 4.5rem);
+  padding: clamp(1.25rem, 2vw, 1.85rem) 0;
+  position: absolute;
+  right: clamp(1.5rem, 5vw, 4.5rem);
+  top: 0;
+  z-index: 50;
+}
+
+.backLink,
+.brand {
+  font-family: inherit;
+  font-size: clamp(0.66rem, 0.76vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.backLink {
+  align-items: center;
+  color: var(--text-secondary);
+  display: inline-flex;
+  gap: 0.65rem;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.backArrow {
+  display: inline-block;
+  font-size: 0.95em;
+  transition: transform 0.25s ease;
+}
+
+.backLink:hover {
+  color: var(--paper);
+  transform: translateX(-2px);
+}
+
+.backLink:hover .backArrow {
+  transform: translateX(-3px);
+}
+
+.brand {
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+}
+
+/* ==================================================
+   1. HERO SECTION (Tuned Editorial Tracking)
+   ================================================== */
+.heroSection {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 85svh;
+  overflow: hidden;
+  padding: clamp(5.5rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4.5rem) clamp(2.5rem, 4vh, 4rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: calc(85svh - clamp(8rem, 12vw, 11rem));
+  width: 100%;
+}
+
+.heroBody {
+  margin: auto 0;
+  transform-style: preserve-3d;
+}
+
+.heroTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3.8rem, 12vw, 12.5rem);
+  font-weight: 650;
+  letter-spacing: -0.068em; /* Tuned to prevent crushed letter collisions */
+  line-height: 0.80;
+  margin: 0 0 0 -0.04em;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+.heroTitleLine1,
+.heroTitleLine2 {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.heroTitleLine2 {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.heroFoot {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.heroCopy {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(0.92rem, 1.15vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 32rem;
+  will-change: transform, opacity;
+}
+
+/* ==================================================
+   2. WHAT CAN I BUILD FOR YOU? (TRANSITION SCENE)
+   ================================================== */
+.transitionSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 60svh;
+  padding: clamp(3.5rem, 6vh, 5.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.transitionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.transitionBody {
+  transform-style: preserve-3d;
+}
+
+.transitionTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 650;
+  letter-spacing: -0.062em; /* Tuned editorial tracking */
+  line-height: 0.82;
+  margin: 0 0 0 -0.04em;
+  text-transform: uppercase;
+}
+
+.transitionLineOne,
+.transitionLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.transitionLineTwo {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.transitionRule {
+  background: linear-gradient(90deg, var(--hairline), transparent 60%);
+  height: 1px;
+  margin-top: clamp(2rem, 3.5vw, 3.5rem);
+  width: 100%;
+}
+
+/* ==================================================
+   OVERLAPPING PHYSICAL COVERS SEQUENCE
+   ================================================== */
+.coversContainer {
+  height: 340vh; /* Dedicated real-scroll track */
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.coversStage {
+  align-items: center;
+  display: flex;
+  height: clamp(540px, 84vh, 880px);
+  justify-content: center;
+  left: 0;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  pointer-events: none;
+  position: sticky;
+  top: clamp(3.5rem, 8vh, 5.5rem);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.serviceCover {
+  backface-visibility: hidden;
+  border: 1px solid var(--hairline-subtle);
+  border-radius: 4px; /* Crisp portfolio architectural radius */
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.85);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  left: 50%;
+  max-height: 880px;
+  overflow: hidden;
+  padding: clamp(2rem, 3.5vw, 3.5rem);
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  width: clamp(320px, 88vw, 1540px);
+  will-change: transform, opacity;
+}
+
+/* Cover Header */
+.coverHeader {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  width: 100%;
+  z-index: 5;
+}
+
+.coverTag {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(0.64rem, 0.76vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.14em; /* Positive tracking for small metadata */
+  opacity: 0.58;
+  text-transform: uppercase;
+}
+
+/* 12-Column Internal Grid */
+.coverBody {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 0;
+  padding: clamp(1rem, 2.5vh, 2rem) 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Left Content Zone (Columns 1 to 5) */
+.coverTextCol {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 6;
+  justify-content: center;
+  max-width: 100%;
+  transform-style: preserve-3d;
+}
+
+.coverTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(2.8rem, 4.6vw, 5rem);
+  font-weight: 650;
+  letter-spacing: -0.052em; /* Tuned: bold and compact without letter collision */
+  line-height: 0.85; /* Healthy optical separation between lines */
+  margin: 0 0 0 -0.035em;
+  text-transform: uppercase;
+}
+
+.coverTitle span {
+  display: block;
+}
+
+.titlePrimary {
+  color: var(--paper);
+}
+
+.titleSecondary {
+  color: rgba(244, 243, 238, 0.82);
+  margin-top: 0.12em;
+}
+
+.coverDescriptor {
+  align-items: center;
+  color: rgba(244, 243, 238, 0.58);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: inherit;
+  font-size: clamp(0.68rem, 0.78vw, 0.85rem);
+  font-weight: 600;
+  gap: 0.45rem;
+  letter-spacing: 0.10em;
+  margin: clamp(1.2rem, 2vh, 1.6rem) 0 0;
+  text-transform: uppercase;
+}
+
+.dot {
+  opacity: 0.5;
+}
+
+.coverStatement {
+  color: rgba(244, 243, 238, 0.65);
+  font-family: inherit;
+  font-size: clamp(0.85rem, 1vw, 0.98rem);
+  font-weight: 400;
+  letter-spacing: -0.020em;
+  line-height: 1.42;
+  margin: 1.1rem 0 0;
+  max-width: 23rem;
+}
+
+/* Editorial Interaction Link (Text + Hairline + Arrow) */
+.coverActionWrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(1.4rem, 2.5vh, 2rem);
+}
+
+.editorialActionLink {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.4);
+  color: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  gap: 1.25rem;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.45rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: gap 0.3s ease, border-color 0.25s ease;
+  width: fit-content;
+}
+
+.editorialActionLink:hover {
+  border-color: var(--paper);
+  gap: 1.75rem;
+}
+
+.actionArrow {
+  color: inherit;
+  font-size: 0.95rem;
+  font-style: normal;
+  line-height: 0.6;
+}
+
+.actionSubtext {
+  color: var(--text-muted);
+  display: block;
+  font-family: inherit;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-top: 0.35rem;
+  text-transform: uppercase;
+}
+
+/* Right Artwork Zone (Columns 6 to 12) */
+.coverVisualCol {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  grid-column: 6 / 13;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* ==================================================
+   MATERIAL-BASED COVER SURFACES (WARM NEUTRAL DARKS)
+   ================================================== */
+
+/* 1. RESTAURANT: Warm Graphite & Near-Black Ceramic */
+.restaurantCover {
+  background:
+    radial-gradient(ellipse at 75% 45%, rgba(200, 190, 175, 0.06), transparent 60%),
+    linear-gradient(155deg, #151514 0%, #121211 55%, #0f0f0e 100%);
+}
+
+/* 2. BUSINESS: Smoked Walnut & Dark Architectural Graphite */
+.businessCover {
+  background:
+    radial-gradient(ellipse at 75% 45%, rgba(185, 155, 125, 0.06), transparent 60%),
+    linear-gradient(155deg, #161514 0%, #131211 55%, #100f0e 100%);
+}
+
+/* 3. E-COMMERCE: Matte Packaging & Neutral Paper */
+.commerceCover {
+  background:
+    radial-gradient(ellipse at 75% 45%, rgba(195, 195, 195, 0.05), transparent 60%),
+    linear-gradient(155deg, #151515 0%, #121212 55%, #0f0f0f 100%);
+}
+
+/* 4. BOOKING: Dark Stone Slate & Brushed Steel */
+.bookingCover {
+  background:
+    radial-gradient(ellipse at 75% 45%, rgba(185, 190, 195, 0.05), transparent 60%),
+    linear-gradient(155deg, #141415 0%, #111213 55%, #0e0f10 100%);
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: RESTAURANT
+   Harmonious Dining Arrangement: Rail Top -> Fork / Plate / Spoon
+   ================================================== */
+.restaurantVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 40vh, 27rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Category Rail (Top Right) */
+.restCategoryRail {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  color: var(--text-muted);
+  display: flex;
+  font-family: inherit;
+  font-size: clamp(0.6rem, 0.7vw, 0.72rem);
+  font-weight: 600;
+  gap: 0.75rem;
+  letter-spacing: 0.16em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 6%;
+  top: 4%;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+.railDot {
+  color: var(--mat-warm-stone);
+}
+
+/* Ceramic Plate (Central Visual Anchor, Perfectly Centered) */
+.restPlate {
+  align-items: center;
+  background: radial-gradient(circle at 45% 45%, #1a1a1c 0%, #141415 65%, #0c0c0d 100%);
+  border: 1px solid rgba(200, 190, 175, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.75),
+    inset 0 2px 4px rgba(244, 243, 238, 0.18),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  display: flex;
+  height: clamp(16rem, 22vw, 20rem);
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(16rem, 22vw, 20rem);
+}
+
+.restPlateRim {
+  align-items: center;
+  border: 1px solid rgba(244, 243, 238, 0.12);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.65);
+  display: flex;
+  height: 82%;
+  justify-content: center;
+  width: 82%;
+}
+
+.restPlateWell {
+  align-items: center;
+  background: radial-gradient(circle at 50% 50%, #111112 0%, #0a0a0b 100%);
+  border: 1px solid rgba(200, 190, 175, 0.22);
+  border-radius: 50%;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 72%;
+  justify-content: center;
+  width: 72%;
+}
+
+.restPlateRing {
+  border: 1px dashed rgba(244, 243, 238, 0.14);
+  border-radius: 50%;
+  height: 60%;
+  width: 60%;
+}
+
+/* Stainless Cutlery Symmetrically Flanking Plate (Shared Vertical Center) */
+.restFork {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: clamp(11.5rem, 16vw, 14.5rem);
+  left: calc(50% - clamp(11.5rem, 14.5vw, 13.5rem));
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  width: 1.4rem;
+}
+
+.forkHead {
+  display: flex;
+  gap: 3px;
+  height: 2.8rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.forkTine {
+  background: linear-gradient(180deg, #d2d6da 0%, #95999d 60%, #4a4d50 100%);
+  border-radius: 1px 1px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 3px;
+}
+
+.cutleryStem {
+  background: linear-gradient(180deg, #95999d 0%, #65686c 50%, #2e3032 100%);
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+  flex: 1;
+  width: 4px;
+}
+
+.restSpoon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: clamp(11.5rem, 16vw, 14.5rem);
+  left: calc(50% + clamp(10rem, 13vw, 12rem));
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  width: 1.6rem;
+}
+
+.spoonBowl {
+  background: radial-gradient(ellipse at 40% 35%, #d8dcd0 0%, #8d9296 65%, #3c3e41 100%);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.4);
+  height: 3.2rem;
+  width: 1.6rem;
+}
+
+/* Chef Special Detail Card (Positioned Above-Left of Plate, Outside Fork Silhouette) */
+.restChefSpecial {
+  background: rgba(24, 24, 23, 0.95);
+  border: 1px solid rgba(200, 190, 175, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  left: calc(50% - clamp(6.5rem, 9vw, 8.5rem));
+  padding: 0.75rem 1rem;
+  position: absolute;
+  top: 3%;
+  transform-style: preserve-3d;
+  width: clamp(10.5rem, 14vw, 12.5rem);
+}
+
+.chefSpecialHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.chefSpecialTag {
+  color: var(--mat-warm-stone);
+  font-family: inherit;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.chefSpecialDot {
+  background: var(--mat-warm-stone);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.chefSpecialDesc {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: BUSINESS
+   Unified Presentation Board Composition
+   ================================================== */
+.businessVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 40vh, 27rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Primary Smoked Walnut Presentation Board (Noticeably Larger Hero, Centered) */
+.bizBoardMain {
+  background: linear-gradient(135deg, #251f19 0%, #1c1713 55%, #13100d 100%);
+  border: 1px solid rgba(185, 155, 125, 0.28);
+  border-top-color: rgba(244, 243, 238, 0.35);
+  border-left-color: rgba(244, 243, 238, 0.25);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(244, 243, 238, 0.22);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  height: clamp(14rem, 19vw, 17.5rem);
+  left: 50%;
+  padding: 1.4rem 1.7rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(22rem, 30vw, 27rem);
+}
+
+.bizBoardHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.12);
+  display: flex;
+  gap: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.bizHeaderMark {
+  background: var(--mat-walnut);
+  height: 5px;
+  width: 5px;
+}
+
+.bizBoardTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(0.66rem, 0.74vw, 0.76rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.bizHeaderNav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.bizHeaderNav span {
+  background: rgba(244, 243, 238, 0.3);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.bizBoardSections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bizSectionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bizSectionLabelRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bizSectionIndex {
+  color: var(--mat-walnut);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.10em;
+}
+
+.bizSectionTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+.bizSectionDesc {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.60rem;
+  letter-spacing: 0.04em;
+}
+
+.bizSectionRule {
+  background: rgba(244, 243, 238, 0.08);
+  height: 1px;
+  margin-top: 0.25rem;
+}
+
+/* Secondary Document Slab (Recessed in Background Layer) */
+.bizBoardSecondary {
+  background: rgba(20, 19, 18, 0.95);
+  border: 1px solid rgba(244, 243, 238, 0.14);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.1rem 1.35rem;
+  position: absolute;
+  right: 6%;
+  top: 12%;
+  transform-style: preserve-3d;
+  width: clamp(11rem, 15vw, 13.5rem);
+}
+
+.bizSecHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bizSecTag {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+}
+
+.bizSecYear {
+  color: var(--mat-walnut);
+  font-family: inherit;
+  font-size: 0.64rem;
+}
+
+.bizSecLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bizSecLines span {
+  background: rgba(244, 243, 238, 0.18);
+  height: 2px;
+}
+
+.bizSecLines span:first-child { width: 90%; }
+.bizSecLines span:last-child { width: 65%; }
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: E-COMMERCE
+   Cohesive Product Display Composition on Base Plinth
+   ================================================== */
+.commerceVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 40vh, 27rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.shopPlinth {
+  background: linear-gradient(180deg, #1b1b1c 0%, #121213 100%);
+  border: 1px solid rgba(244, 243, 238, 0.08);
+  border-top: 1px solid rgba(244, 243, 238, 0.22);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  height: 1.5rem;
+  left: 8%;
+  position: absolute;
+  bottom: 12%;
+  width: 84%;
+}
+
+/* Primary Product Box (Centered & Commanding) */
+.shopBoxPrimary {
+  box-sizing: border-box;
+  left: 50%;
+  position: absolute;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(13rem, 17vw, 15.5rem);
+}
+
+.shopBoxPrimary .shopBoxTop {
+  background: #2a2a2c;
+  border: 1px solid rgba(244, 243, 238, 0.28);
+  border-bottom: none;
+  height: 14px;
+  transform: skewX(-32deg);
+  transform-origin: bottom left;
+  width: 100%;
+}
+
+.shopBoxPrimary .shopBoxFace {
+  background: linear-gradient(145deg, #1c1c1e 0%, #131314 100%);
+  border: 1px solid rgba(244, 243, 238, 0.16);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.shopFocusHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopFocusTag {
+  color: var(--mat-paper);
+  font-family: inherit;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+
+.shopFocusStatus {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.6rem;
+  letter-spacing: 0.10em;
+}
+
+.shopFocusContext {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.60rem;
+  letter-spacing: 0.04em;
+}
+
+.shopFocusSpec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.shopSpecLine1,
+.shopSpecLine2 {
+  background: rgba(244, 243, 238, 0.2);
+  display: block;
+  height: 2px;
+}
+
+.shopSpecLine1 { width: 85%; }
+.shopSpecLine2 { width: 55%; }
+
+/* Secondary Packaging Block (Behind / Left) */
+.shopBoxSecondary {
+  box-sizing: border-box;
+  left: 10%;
+  position: absolute;
+  top: 24%;
+  transform-style: preserve-3d;
+  width: clamp(9rem, 12.5vw, 11rem);
+}
+
+.shopBoxSecondary .shopBoxTop {
+  background: #1f1f21;
+  border: 1px solid rgba(244, 243, 238, 0.18);
+  border-bottom: none;
+  height: 10px;
+  transform: skewX(-32deg);
+  transform-origin: bottom left;
+  width: 100%;
+}
+
+.shopBoxSecondary .shopBoxFace {
+  background: #151516;
+  border: 1px solid rgba(244, 243, 238, 0.1);
+  box-sizing: border-box;
+  padding: 0.95rem;
+  width: 100%;
+}
+
+.shopBoxTag {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.10em;
+}
+
+.shopBoxLines span {
+  background: rgba(244, 243, 238, 0.15);
+  display: block;
+  height: 2px;
+  margin-top: 0.4rem;
+  width: 60%;
+}
+
+/* Luxury Shopping Bag (Behind / Right) */
+.shopBag {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  transform-style: preserve-3d;
+  width: clamp(10rem, 13.5vw, 12.5rem);
+}
+
+.shopBagHandle {
+  border: 2px solid rgba(200, 190, 175, 0.45);
+  border-bottom: none;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  height: 2.2rem;
+  width: 3.5rem;
+}
+
+.shopBagBody {
+  background: linear-gradient(150deg, #1d1e1f 0%, #121314 100%);
+  border: 1px solid rgba(244, 243, 238, 0.14);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: clamp(8.5rem, 12vw, 10.5rem);
+  padding: 1.1rem;
+  width: 100%;
+}
+
+.shopBagTagRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopBagLabel {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.shopBagCount {
+  color: var(--mat-paper);
+  font-family: inherit;
+  font-size: 0.64rem;
+}
+
+.shopBagContext {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.60rem;
+}
+
+.shopBagBrandLine {
+  background: var(--mat-paper);
+  display: block;
+  height: 2px;
+  margin-top: 0.25rem;
+  opacity: 0.5;
+  width: 40%;
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: BOOKING
+   Cohesive Scheduling Object Grouping
+   ================================================== */
+.bookingVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 40vh, 27rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Calendar Base Plane (Main Left-Center Anchor) */
+.bookCalPlane {
+  background: rgba(20, 20, 21, 0.95);
+  border: 1px solid rgba(244, 243, 238, 0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  left: 8%;
+  padding: 1.35rem 1.5rem;
+  position: absolute;
+  top: 14%;
+  transform-style: preserve-3d;
+  width: clamp(16rem, 21.5vw, 19.5rem);
+}
+
+.bookCalHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.55rem;
+}
+
+.bookCalMonth {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.bookCalStatus {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.10em;
+}
+
+.bookCalContext {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.60rem;
+  letter-spacing: 0.04em;
+}
+
+.bookSlotsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.bookSlotMuted {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.48rem 0.8rem;
+}
+
+.bookSlotTime {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.68rem;
+}
+
+.bookSlotState {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+}
+
+/* Brushed Metal Clock (Upper-Right Overlapping) */
+.bookClock {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  right: 8%;
+  top: 10%;
+  transform-style: preserve-3d;
+}
+
+.clockBezel {
+  align-items: center;
+  background: radial-gradient(circle at 45% 45%, #25262a 0%, #17181a 70%, #0d0e0f 100%);
+  border: 1px solid rgba(200, 190, 175, 0.38);
+  border-radius: 50%;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.65),
+    inset 0 1px 3px rgba(255, 255, 255, 0.22);
+  display: flex;
+  height: clamp(9rem, 12.5vw, 11rem);
+  justify-content: center;
+  width: clamp(9rem, 12.5vw, 11rem);
+}
+
+.clockFace {
+  align-items: center;
+  border: 1px solid rgba(244, 243, 238, 0.14);
+  border-radius: 50%;
+  display: flex;
+  height: 82%;
+  justify-content: center;
+  position: relative;
+  width: 82%;
+}
+
+.clockCenterPivot {
+  background: var(--paper);
+  border-radius: 50%;
+  height: 6px;
+  position: absolute;
+  width: 6px;
+  z-index: 4;
+}
+
+.clockHourHand {
+  background: #e2dfd8;
+  height: 32%;
+  left: 50%;
+  position: absolute;
+  top: 22%;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: bottom center;
+  width: 2px;
+  z-index: 2;
+}
+
+.clockMinuteHand {
+  background: var(--paper);
+  height: 42%;
+  left: 50%;
+  position: absolute;
+  top: 10%;
+  transform: translateX(-50%) rotate(165deg);
+  transform-origin: bottom center;
+  width: 1.5px;
+  z-index: 3;
+}
+
+.clockMarkTop,
+.clockMarkRight,
+.clockMarkBottom,
+.clockMarkLeft {
+  background: rgba(244, 243, 238, 0.35);
+  position: absolute;
+}
+
+.clockMarkTop { height: 6px; top: 3px; width: 1.5px; }
+.clockMarkBottom { bottom: 3px; height: 6px; width: 1.5px; }
+.clockMarkLeft { height: 1.5px; left: 3px; width: 6px; }
+.clockMarkRight { height: 1.5px; right: 3px; width: 6px; }
+
+.clockInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.clockLabel {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.clockContext {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.58rem;
+}
+
+/* Selected Focal Time Slot */
+.bookSlotFocal {
+  background: rgba(28, 29, 31, 0.95);
+  border: 1px solid rgba(200, 190, 175, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  left: 44%;
+  padding: 0.95rem 1.35rem;
+  position: absolute;
+  top: 48%;
+  transform-style: preserve-3d;
+  width: clamp(10rem, 14vw, 12.5rem);
+}
+
+.bookFocalHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookFocalTag {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.10em;
+}
+
+.bookFocalDot {
+  background: var(--paper);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.bookFocalTime {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.bookFocalStatus {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+
+/* Appointment Confirmation Card */
+.bookConfirmCard {
+  background: rgba(22, 23, 24, 0.95);
+  border: 1px solid rgba(244, 243, 238, 0.14);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  left: 10%;
+  padding: 0.85rem 1.15rem;
+  position: absolute;
+  bottom: 8%;
+  transform-style: preserve-3d;
+}
+
+.bookConfirmHeader {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bookConfirmTag {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.bookConfirmCheck {
+  color: var(--paper);
+  font-size: 0.75rem;
+}
+
+.bookConfirmContext {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.58rem;
+}
+
+.bookConfirmDetail {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+/* ==================================================
+   7. BUILT AROUND YOUR BUSINESS (VALUE SECTION)
+   ================================================== */
+.valueSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 60svh;
+  padding: clamp(4.5rem, 8vh, 7rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.valueContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.valueBody {
+  transform-style: preserve-3d;
+}
+
+.valueTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 650;
+  letter-spacing: -0.058em; /* Tuned: bold, compact, readable */
+  line-height: 0.82;
+  margin: 0 0 2rem -0.035em;
+  text-transform: uppercase;
+}
+
+.valueLineOne,
+.valueLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.valueLineTwo {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.valueStatement {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.25vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 44ch;
+  will-change: transform, opacity;
+}
+
+/* ==================================================
+   8. FINAL CTA (Homepage / Contact DNA)
+   ================================================== */
+.ctaSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 52svh;
+  padding: clamp(4.5rem, 8vh, 6.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.ctaContent {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.ctaHead {
+  flex: 1;
+  min-width: 280px;
+  transform-style: preserve-3d;
+}
+
+.ctaTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(2.8rem, 7.8vw, 7.2rem);
+  font-weight: 650;
+  letter-spacing: -0.058em; /* Tuned editorial tracking */
+  line-height: 0.82;
+  margin: 0 0 1.5rem -0.035em;
+  text-transform: uppercase;
+}
+
+.ctaLineOne,
+.ctaLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.ctaCopy {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  margin: 0;
+  will-change: transform, opacity;
+}
+
+.ctaActionRow {
+  display: flex;
+  margin-top: 1.5rem;
+  transform-style: preserve-3d;
+}
+
+/* Refined Editorial CTA Link (Homepage Contact Language) */
+.ctaEditorialLink {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.6);
+  color: var(--paper);
+  display: inline-flex;
+  font-family: inherit;
+  font-size: clamp(1.1rem, 1.8vw, 1.85rem);
+  font-weight: 600;
+  gap: 1.5rem;
+  letter-spacing: -0.035em;
+  padding-bottom: 0.65rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease, gap 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.ctaEditorialLink:hover {
+  gap: 2rem;
+  opacity: 0.7;
+}
+
+.ctaArrow {
+  display: inline-block;
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.ctaEditorialLink:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ==================================================
+   9. MINIMAL FOOTER
+   ================================================== */
+.footer {
+  border-top: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  padding: 2.5rem clamp(1.5rem, 5vw, 4.5rem);
+  width: 100%;
+}
+
+.footerNav {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.footerLink {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--paper);
+}
+
+.footerDivider {
+  color: var(--hairline);
+  font-size: 0.8rem;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN SYSTEM
+   ================================================== */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .coversContainer {
+    height: 320vh;
+  }
+
+  .coversStage {
+    height: clamp(520px, 82vh, 760px);
+  }
+
+  .serviceCover {
+    padding: 2.2rem 2.4rem;
+    width: 90vw;
+  }
+
+  .coverBody {
+    gap: 2rem;
+    grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.3fr);
+  }
+
+  .coverTitle {
+    font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+    letter-spacing: -0.045em;
+  }
+
+  .restPlate {
+    height: clamp(14rem, 20vw, 17rem);
+    width: clamp(14rem, 20vw, 17rem);
+  }
+
+  .restFork {
+    left: calc(50% - clamp(9.5rem, 13vw, 11rem));
+  }
+
+  .restSpoon {
+    left: calc(50% + clamp(8.5rem, 12vw, 10rem));
+  }
+
+  .bizBoardMain {
+    width: clamp(18rem, 26vw, 22rem);
+  }
+}
+
+/* Mobile (768px and below) — Recomposed Vertically, Zero Congestion */
+@media (max-width: 768px) {
+  .header {
+    left: 1.25rem;
+    padding: 1.15rem 0;
+    right: 1.25rem;
+  }
+
+  .heroSection {
+    min-height: 80svh;
+    padding: 5.5rem 1.25rem 2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(3.2rem, 14vw, 5.2rem);
+    letter-spacing: -0.055em;
+    line-height: 0.84;
+  }
+
+  .heroTitleLine2 {
+    margin-top: 0.08em;
+  }
+
+  .transitionSection {
+    min-height: 52svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .transitionTitle {
+    font-size: clamp(2.5rem, 11vw, 4.2rem);
+    letter-spacing: -0.05em;
+  }
+
+  .coversContainer {
+    height: 260vh;
+  }
+
+  .coversStage {
+    height: clamp(480px, 82vh, 640px);
+    top: 3.8rem;
+  }
+
+  .serviceCover {
+    border-radius: 4px;
+    padding: 1.35rem 1.2rem;
+    width: 90vw;
+  }
+
+  .coverHeader {
+    padding-bottom: 0.65rem;
+  }
+
+  .coverBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: space-between;
+    padding: 0.65rem 0;
+  }
+
+  .coverTextCol {
+    max-width: 100%;
+  }
+
+  .coverTitle {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+    letter-spacing: -0.04em;
+    line-height: 0.86;
+  }
+
+  .coverDescriptor {
+    font-size: 0.66rem;
+    margin-top: 0.65rem;
+  }
+
+  .coverStatement {
+    display: none; /* Keep mobile covers clean and uncongested */
+  }
+
+  .coverActionWrap {
+    margin-top: 0.75rem;
+  }
+
+  .editorialActionLink {
+    font-size: 0.68rem;
+    gap: 1rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .coverVisualCol {
+    height: clamp(13rem, 30vh, 16rem);
+    width: 100%;
+  }
+
+  /* Mobile Artwork Simplification */
+  .restaurantVisualContainer,
+  .businessVisualContainer,
+  .commerceVisualContainer,
+  .bookingVisualContainer {
+    height: 100%;
+  }
+
+  /* Restaurant mobile: plate + fork + spoon */
+  .restPlate {
+    height: 11rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11rem;
+  }
+
+  .restFork {
+    height: 8.5rem;
+    left: calc(50% - 7.5rem);
+    transform: translateY(-50%);
+  }
+
+  .restSpoon {
+    height: 8.5rem;
+    left: calc(50% + 6.5rem);
+    transform: translateY(-50%);
+  }
+
+  .restCategoryRail,
+  .restChefSpecial {
+    display: none;
+  }
+
+  /* Business mobile: main board */
+  .bizBoardMain {
+    height: auto;
+    left: 50%;
+    padding: 1rem 1.15rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  .bizBoardSecondary {
+    display: none;
+  }
+
+  /* Commerce mobile: main product box */
+  .shopPlinth,
+  .shopBoxSecondary {
+    display: none;
+  }
+
+  .shopBoxPrimary {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+  }
+
+  .shopBag {
+    display: none;
+  }
+
+  /* Booking mobile: clock + slot focal */
+  .bookCalPlane,
+  .bookConfirmCard {
+    display: none;
+  }
+
+  .bookClock {
+    left: 50%;
+    right: auto;
+    top: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .clockBezel {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .bookSlotFocal {
+    left: 50%;
+    padding: 0.65rem 1rem;
+    top: 75%;
+    transform: translateX(-50%);
+    width: 9rem;
+  }
+
+  .valueSection {
+    min-height: 52svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .valueTitle {
+    font-size: clamp(2.4rem, 10.5vw, 3.8rem);
+    letter-spacing: -0.045em;
+  }
+
+  .ctaSection {
+    min-height: 48svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .ctaTitle {
+    font-size: clamp(2.2rem, 9.5vw, 3.4rem);
+    letter-spacing: -0.045em;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .coversContainer {
+    height: auto;
+  }
+
+  .coversStage {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    position: static;
+  }
+
+  .serviceCover {
+    opacity: 1 !important;
+    position: relative;
+    top: auto;
+    transform: none !important;
+  }
+}

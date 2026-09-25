@@ -1,0 +1,205 @@
+.pickerWrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.triggerButton {
+  align-items: center;
+  background: rgba(242, 240, 234, 0.03);
+  border: 1px solid rgba(242, 240, 234, 0.22);
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #f2f0ea;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: 0.95rem;
+  justify-content: space-between;
+  line-height: 1.4;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  width: 100%;
+}
+
+.triggerButton:hover {
+  background: rgba(242, 240, 234, 0.06);
+  border-color: rgba(242, 240, 234, 0.45);
+}
+
+.triggerButton:focus-visible {
+  border-color: #f2f0ea;
+  outline: 1px solid #f2f0ea;
+  outline-offset: 1px;
+}
+
+.triggerButton[aria-expanded="true"] {
+  border-color: #f2f0ea;
+  background: rgba(242, 240, 234, 0.08);
+}
+
+.triggerValue {
+  color: #f2f0ea;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.triggerPlaceholder {
+  color: rgba(242, 240, 234, 0.45);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+}
+
+.calendarIcon {
+  color: rgba(242, 240, 234, 0.6);
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.triggerButton:hover .calendarIcon,
+.triggerButton[aria-expanded="true"] .calendarIcon {
+  color: #f2f0ea;
+}
+
+.popover {
+  background: #131413;
+  border: 1px solid rgba(242, 240, 234, 0.25);
+  border-radius: 2px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+  box-sizing: border-box;
+  left: 0;
+  margin-top: 0.35rem;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  width: 19rem;
+  z-index: 95;
+}
+
+.calendarHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.12);
+}
+
+.monthTitle {
+  color: #f2f0ea;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.navButton {
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(242, 240, 234, 0.2);
+  border-radius: 2px;
+  color: #f2f0ea;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.85rem;
+  height: 1.75rem;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.15s ease;
+  width: 1.75rem;
+}
+
+.navButton:hover:not(:disabled) {
+  background: rgba(242, 240, 234, 0.12);
+  border-color: #f2f0ea;
+}
+
+.navButton:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.weekdaysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 0.35rem;
+  text-align: center;
+}
+
+.weekdayLabel {
+  color: rgba(242, 240, 234, 0.45);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0;
+  text-transform: uppercase;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.dayCell {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #f2f0ea;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  height: 2.1rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.dayCell:hover:not(:disabled):not(.daySelected) {
+  background: rgba(242, 240, 234, 0.1);
+  border-color: rgba(242, 240, 234, 0.3);
+}
+
+.dayCell:disabled {
+  color: rgba(242, 240, 234, 0.18);
+  cursor: not-allowed;
+}
+
+.daySelected {
+  background: #f2f0ea !important;
+  border-color: #f2f0ea !important;
+  color: #080909 !important;
+  font-weight: 700;
+}
+
+.dayToday:not(.daySelected) {
+  border-color: rgba(207, 214, 205, 0.45);
+}
+
+.emptyCell {
+  height: 2.1rem;
+}
+
+@media (max-width: 768px) {
+  .triggerButton {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}

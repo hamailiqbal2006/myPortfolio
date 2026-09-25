@@ -1,0 +1,1864 @@
+@charset "UTF-8";
+
+/* ==================================================
+   WEBSITE DEVELOPMENT SHOWROOM — EDITORIAL PORTFOLIO SYSTEM
+   Integrated into portfolio #080909 foundation with physical materials.
+   ================================================== */
+.page {
+  --bg: #080909;
+  --paper: #f2f0ea;
+  --text-secondary: rgba(242, 240, 234, 0.65);
+  --text-muted: rgba(242, 240, 234, 0.38);
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-subtle: rgba(255, 255, 255, 0.05);
+  --accent-warm: #c5baa8;
+  --accent-steel: #8e9ca8;
+
+  background: var(--bg);
+  box-sizing: border-box;
+  color: var(--paper);
+  min-height: 100vh;
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+}
+
+/* ==================================================
+   TOP HEADER NAVIGATION
+   ================================================== */
+.header {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  left: clamp(1.5rem, 5vw, 4.5rem);
+  padding: clamp(1.25rem, 2vw, 1.85rem) 0;
+  position: absolute;
+  right: clamp(1.5rem, 5vw, 4.5rem);
+  top: 0;
+  z-index: 50;
+}
+
+.backLink,
+.brand {
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.backLink {
+  align-items: center;
+  color: var(--text-secondary);
+  display: inline-flex;
+  gap: 0.65rem;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.backArrow {
+  display: inline-block;
+  font-size: 0.95em;
+  transition: transform 0.25s ease;
+}
+
+.backLink:hover {
+  color: var(--paper);
+  transform: translateX(-2px);
+}
+
+.backLink:hover .backArrow {
+  transform: translateX(-3px);
+}
+
+.brand {
+  color: var(--text-muted);
+  letter-spacing: 0.22em;
+}
+
+/* ==================================================
+   1. HERO SECTION
+   ================================================== */
+.heroSection {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 85svh;
+  overflow: hidden;
+  padding: clamp(5rem, 8vw, 7.5rem) clamp(1.5rem, 5vw, 4.5rem) clamp(2.5rem, 4vh, 4rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: calc(85svh - clamp(7.5rem, 12vw, 11rem));
+  width: 100%;
+}
+
+.heroBody {
+  margin: auto 0;
+  transform-style: preserve-3d;
+}
+
+.heroTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-serif), Georgia, serif;
+  font-size: clamp(3.8rem, 11vw, 10.5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.86;
+  margin: 0;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+}
+
+.heroTitleLine1,
+.heroTitleLine2 {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.heroTitleLine2 {
+  color: var(--accent-warm);
+  margin-left: clamp(0.5rem, 6vw, 6.5rem);
+  margin-top: 0.12em;
+}
+
+.heroFoot {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.heroCopy {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-sans), system-ui, sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 34rem;
+  will-change: transform, opacity;
+}
+
+/* ==================================================
+   2. WHAT CAN I BUILD FOR YOU? (TRANSITION SCENE)
+   ================================================== */
+.transitionSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 60svh;
+  padding: clamp(3.5rem, 6vh, 5.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.transitionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.transitionBody {
+  transform-style: preserve-3d;
+}
+
+.transitionTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-serif), Georgia, serif;
+  font-size: clamp(2.8rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.transitionLineOne,
+.transitionLineTwo {
+  display: block;
+}
+
+.transitionLineTwo {
+  color: var(--accent-warm);
+  margin-left: clamp(0.5rem, 5vw, 5rem);
+  margin-top: 0.12em;
+}
+
+.transitionRule {
+  background: linear-gradient(90deg, var(--hairline), transparent 60%);
+  height: 1px;
+  margin-top: clamp(2rem, 3.5vw, 3.5rem);
+  width: 100%;
+}
+
+/* ==================================================
+   OVERLAPPING PHYSICAL COVERS SEQUENCE
+   ================================================== */
+.coversContainer {
+  height: 380vh; /* Dedicated real-scroll track */
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.coversStage {
+  align-items: center;
+  display: flex;
+  height: clamp(520px, 82vh, 800px);
+  justify-content: center;
+  left: 0;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  pointer-events: none;
+  position: sticky;
+  top: clamp(3.5rem, 8vh, 5.5rem);
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.serviceCover {
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow:
+    0 35px 85px -20px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  left: 50%;
+  max-height: 800px;
+  overflow: hidden;
+  padding: clamp(1.8rem, 3vw, 3rem);
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  width: clamp(320px, 86vw, 1320px);
+  will-change: transform, opacity;
+}
+
+/* Cover Header */
+.coverHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  width: 100%;
+  z-index: 5;
+}
+
+.coverTag,
+.coverFormat {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.68rem, 0.76vw, 0.82rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.coverFormat {
+  opacity: 0.65;
+}
+
+/* Cover Body Grid */
+.coverBody {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  grid-template-columns: minmax(320px, 1fr) minmax(380px, 1.4fr);
+  min-height: 0;
+  padding: clamp(1rem, 2vh, 2rem) 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.coverTextCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 460px;
+  transform-style: preserve-3d;
+}
+
+.coverTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-serif), Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.coverTitle span {
+  display: block;
+}
+
+.coverTitleSub {
+  margin-top: 0.08em;
+}
+
+.titlePrimary {
+  color: var(--paper);
+}
+
+.titleAccentWarm {
+  color: var(--accent-warm);
+}
+
+.titleAccentSteel {
+  color: var(--accent-steel);
+}
+
+.coverDescriptor {
+  align-items: center;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.72rem, 0.84vw, 0.86rem);
+  gap: 0.45rem;
+  letter-spacing: 0.12em;
+  margin: 1.25rem 0 0;
+  text-transform: uppercase;
+}
+
+.dot {
+  color: var(--accent-warm);
+  opacity: 0.6;
+}
+
+.coverStatement {
+  color: rgba(242, 240, 234, 0.65);
+  font-family: var(--font-editorial-sans), system-ui, sans-serif;
+  font-size: clamp(0.92rem, 1.05vw, 1.08rem);
+  font-weight: 300;
+  line-height: 1.55;
+  margin: 1rem 0 0;
+  max-width: 38ch;
+}
+
+/* Cover Visual Column */
+.coverVisualCol {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* Cover Footer */
+.coverFoot {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  width: 100%;
+  z-index: 5;
+}
+
+.coverIndex,
+.coverScrollHint {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.65rem, 0.72vw, 0.78rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   MATERIAL-BASED COVER TEXTURES (NO RANDOM PAGE THEMES)
+   ================================================== */
+
+/* 1. RESTAURANT: Dark Ceramic & Stainless Steel */
+.restaurantCover {
+  background:
+    radial-gradient(ellipse at 78% 48%, rgba(195, 185, 170, 0.045), transparent 60%),
+    linear-gradient(155deg, rgba(22, 24, 24, 0.98), rgba(12, 13, 14, 0.99));
+}
+
+/* 2. BUSINESS: Smoked Walnut & Graphite Architectural */
+.businessCover {
+  background:
+    radial-gradient(ellipse at 28% 48%, rgba(165, 145, 125, 0.04), transparent 60%),
+    linear-gradient(155deg, rgba(24, 23, 22, 0.98), rgba(13, 13, 12, 0.99));
+}
+
+/* 3. E-COMMERCE: Matte Packaging & Anodized Metal */
+.commerceCover {
+  background:
+    radial-gradient(ellipse at 78% 48%, rgba(175, 185, 195, 0.04), transparent 60%),
+    linear-gradient(155deg, rgba(21, 23, 25, 0.98), rgba(11, 12, 14, 0.99));
+}
+
+/* 4. BOOKING: Dark Slate, Stone & Steel */
+.bookingCover {
+  background:
+    radial-gradient(ellipse at 78% 48%, rgba(165, 175, 185, 0.04), transparent 60%),
+    linear-gradient(155deg, rgba(20, 22, 24, 0.98), rgba(11, 12, 13, 0.99));
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: RESTAURANT
+   ================================================== */
+.restaurantVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 38vh, 26rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.restCategoryRail {
+  align-items: center;
+  border-bottom: 1px solid rgba(240, 237, 230, 0.12);
+  display: flex;
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.6rem, 0.7vw, 0.72rem);
+  gap: 0.75rem;
+  letter-spacing: 0.18em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 6%;
+  top: 6%;
+  transform-style: preserve-3d;
+  color: var(--text-muted);
+}
+
+.railDot {
+  color: var(--accent-warm);
+}
+
+.restPlate {
+  align-items: center;
+  background: radial-gradient(circle at 45% 45%, #18191b 0%, #121314 65%, #0b0b0c 100%);
+  border: 1px solid rgba(181, 172, 160, 0.32);
+  border-radius: 50%;
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.65),
+    inset 0 2px 4px rgba(240, 237, 230, 0.15),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  height: clamp(14rem, 24vw, 18rem);
+  justify-content: center;
+  position: absolute;
+  right: clamp(1rem, 6vw, 4rem);
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  width: clamp(14rem, 24vw, 18rem);
+}
+
+.restPlateRim {
+  align-items: center;
+  border: 1px solid rgba(240, 237, 230, 0.1);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+  display: flex;
+  height: 82%;
+  justify-content: center;
+  width: 82%;
+}
+
+.restPlateWell {
+  align-items: center;
+  background: radial-gradient(circle at 50% 50%, #101112 0%, #0a0a0b 100%);
+  border: 1px solid rgba(181, 172, 160, 0.22);
+  border-radius: 50%;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.7);
+  display: flex;
+  height: 72%;
+  justify-content: center;
+  width: 72%;
+}
+
+.restPlateRing {
+  border: 1px dashed rgba(240, 237, 230, 0.12);
+  border-radius: 50%;
+  height: 60%;
+  width: 60%;
+}
+
+.restFork {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: clamp(11rem, 18vw, 14rem);
+  position: absolute;
+  right: clamp(16rem, 32vw, 24rem);
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  width: 1.4rem;
+}
+
+.forkHead {
+  display: flex;
+  gap: 3px;
+  height: 2.8rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.forkTine {
+  background: linear-gradient(180deg, #c2c6ca 0%, #85898d 60%, #4a4d50 100%);
+  border-radius: 1px 1px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 3px;
+}
+
+.cutleryStem {
+  background: linear-gradient(180deg, #85898d 0%, #5a5d61 50%, #2e3032 100%);
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+  flex: 1;
+  width: 4px;
+}
+
+.restSpoon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: clamp(11rem, 18vw, 14rem);
+  position: absolute;
+  right: clamp(0.2rem, 1.5vw, 1.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  width: 1.6rem;
+}
+
+.spoonBowl {
+  background: radial-gradient(ellipse at 40% 35%, #c8ccd0 0%, #7d8286 65%, #3c3e41 100%);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.4);
+  height: 3.2rem;
+  width: 1.6rem;
+}
+
+.restStripPrimary {
+  background: rgba(18, 19, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  left: 2%;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  top: 14%;
+  transform-style: preserve-3d;
+  width: clamp(10rem, 15vw, 12.5rem);
+}
+
+.restStripHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.restStripTag {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.restStripStatus {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+}
+
+.restStripLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.restStripLines span {
+  background: rgba(240, 237, 230, 0.2);
+  display: block;
+  height: 2px;
+}
+
+.restStripLines span:first-child { width: 85%; }
+.restStripLines span:last-child { width: 60%; }
+
+.restChefSpecial {
+  background: rgba(24, 25, 26, 0.95);
+  border: 1px solid rgba(195, 185, 170, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  left: 6%;
+  padding: 0.85rem 1.15rem;
+  position: absolute;
+  top: 48%;
+  transform-style: preserve-3d;
+  width: clamp(12rem, 18vw, 15rem);
+}
+
+.chefSpecialHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.chefSpecialTag {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+}
+
+.chefSpecialDot {
+  background: var(--accent-warm);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.chefSpecialDesc {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+}
+
+.restActionStrip {
+  align-items: center;
+  background: #151617;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  left: 10%;
+  padding: 0.65rem 1rem;
+  position: absolute;
+  bottom: 8%;
+  transform-style: preserve-3d;
+}
+
+.restActionLabel {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.restActionArrow {
+  color: var(--accent-warm);
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: BUSINESS
+   ================================================== */
+.businessVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 38vh, 26rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.bizBoardMain {
+  background: linear-gradient(145deg, #1c1a17 0%, #151413 55%, #10100f 100%);
+  border: 1px solid rgba(181, 172, 160, 0.2);
+  border-top-color: rgba(240, 237, 230, 0.3);
+  border-left-color: rgba(240, 237, 230, 0.2);
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(240, 237, 230, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  left: 6%;
+  padding: 1.4rem 1.6rem;
+  position: absolute;
+  top: 8%;
+  transform-style: preserve-3d;
+  width: clamp(16rem, 28vw, 24rem);
+}
+
+.bizBoardHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(240, 237, 230, 0.1);
+  display: flex;
+  gap: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.bizHeaderMark {
+  background: var(--accent-warm);
+  height: 5px;
+  width: 5px;
+}
+
+.bizBoardTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.64rem, 0.72vw, 0.74rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.bizHeaderNav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.bizHeaderNav span {
+  background: rgba(240, 237, 230, 0.3);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.bizBoardSections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bizSectionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bizSectionLabelRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bizSectionIndex {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+}
+
+.bizSectionTitle {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+}
+
+.bizSectionRule {
+  background: rgba(240, 237, 230, 0.08);
+  height: 1px;
+}
+
+.bizBoardSecondary {
+  background: rgba(18, 19, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1rem 1.25rem;
+  position: absolute;
+  right: 6%;
+  top: 24%;
+  transform-style: preserve-3d;
+  width: clamp(11rem, 16vw, 14rem);
+}
+
+.bizSecHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bizSecTag {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+}
+
+.bizSecYear {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.64rem;
+}
+
+.bizSecLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bizSecLines span {
+  background: rgba(240, 237, 230, 0.18);
+  height: 2px;
+}
+
+.bizSecLines span:first-child { width: 90%; }
+.bizSecLines span:last-child { width: 65%; }
+
+.bizActionStrip {
+  align-items: center;
+  background: #151617;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  position: absolute;
+  right: 12%;
+  bottom: 10%;
+  transform-style: preserve-3d;
+}
+
+.bizActionLabel {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.bizActionArrow {
+  color: var(--accent-warm);
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: E-COMMERCE
+   ================================================== */
+.commerceVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 38vh, 26rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.shopPlinth {
+  background: linear-gradient(180deg, #18191b 0%, #101112 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  height: 2rem;
+  left: 8%;
+  position: absolute;
+  bottom: 12%;
+  width: 84%;
+}
+
+.shopBoxPrimary {
+  box-sizing: border-box;
+  left: clamp(2rem, 14vw, 10rem);
+  position: absolute;
+  top: 18%;
+  transform-style: preserve-3d;
+  width: clamp(11.5rem, 17vw, 14.5rem);
+}
+
+.shopBoxPrimary .shopBoxTop {
+  background: #252629;
+  border: 1px solid rgba(240, 237, 230, 0.28);
+  border-bottom: none;
+  height: 14px;
+  transform: skewX(-32deg);
+  transform-origin: bottom left;
+  width: 100%;
+}
+
+.shopBoxPrimary .shopBoxFace {
+  background: linear-gradient(145deg, #18191b 0%, #101112 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.15rem;
+  width: 100%;
+}
+
+.shopFocusHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopFocusTag {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.shopFocusStatus {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+
+.shopFocusSpec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.shopSpecLine1,
+.shopSpecLine2 {
+  background: rgba(240, 237, 230, 0.2);
+  display: block;
+  height: 2px;
+}
+
+.shopSpecLine1 { width: 85%; }
+.shopSpecLine2 { width: 55%; }
+
+.shopBoxSecondary {
+  box-sizing: border-box;
+  left: 4%;
+  position: absolute;
+  top: 30%;
+  transform-style: preserve-3d;
+  width: clamp(9rem, 13vw, 11rem);
+}
+
+.shopBoxSecondary .shopBoxTop {
+  background: #1c1d1f;
+  border: 1px solid rgba(240, 237, 230, 0.18);
+  border-bottom: none;
+  height: 10px;
+  transform: skewX(-32deg);
+  transform-origin: bottom left;
+  width: 100%;
+}
+
+.shopBoxSecondary .shopBoxFace {
+  background: #131415;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  padding: 0.85rem;
+  width: 100%;
+}
+
+.shopBoxTag {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.shopBoxLines span {
+  background: rgba(240, 237, 230, 0.15);
+  display: block;
+  height: 2px;
+  margin-top: 0.4rem;
+  width: 60%;
+}
+
+.shopBag {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: clamp(1rem, 6vw, 5rem);
+  top: 24%;
+  transform-style: preserve-3d;
+  width: clamp(9.5rem, 14vw, 12rem);
+}
+
+.shopBagHandle {
+  border: 2px solid rgba(195, 185, 170, 0.4);
+  border-bottom: none;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  height: 2.2rem;
+  width: 3.5rem;
+}
+
+.shopBagBody {
+  background: linear-gradient(150deg, #1b1c1e 0%, #111213 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: clamp(8.5rem, 12vw, 10.5rem);
+  padding: 1rem;
+  width: 100%;
+}
+
+.shopBagTagRow {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopBagLabel {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.shopBagCount {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+}
+
+.shopBagBrandLine {
+  background: var(--accent-warm);
+  display: block;
+  height: 2px;
+  opacity: 0.5;
+  width: 40%;
+}
+
+.shopCartPlane {
+  align-items: center;
+  background: rgba(20, 21, 22, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  position: absolute;
+  right: clamp(1rem, 6vw, 5rem);
+  top: 10%;
+  transform-style: preserve-3d;
+}
+
+.shopCartLabel {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.shopCartCount {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+}
+
+.shopActionStrip {
+  align-items: center;
+  background: #151617;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  position: absolute;
+  left: 20%;
+  bottom: 6%;
+  transform-style: preserve-3d;
+}
+
+.shopActionLabel {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.shopActionArrow {
+  color: var(--accent-warm);
+}
+
+/* ==================================================
+   PHYSICAL 3D ARTWORK: BOOKING
+   ================================================== */
+.bookingVisualContainer {
+  box-sizing: border-box;
+  height: clamp(20rem, 38vh, 26rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.bookCalPlane {
+  background: rgba(18, 19, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  left: 4%;
+  padding: 1.25rem 1.4rem;
+  position: absolute;
+  top: 10%;
+  transform-style: preserve-3d;
+  width: clamp(14rem, 22vw, 18rem);
+}
+
+.bookCalHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(240, 237, 230, 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.bookCalMonth {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.bookCalStatus {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.bookSlotsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.bookSlotMuted {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0.75rem;
+}
+
+.bookSlotTime {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+}
+
+.bookSlotState {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+}
+
+.bookClock {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  right: clamp(1rem, 6vw, 5rem);
+  top: 10%;
+  transform-style: preserve-3d;
+}
+
+.clockBezel {
+  align-items: center;
+  background: radial-gradient(circle at 45% 45%, #222326 0%, #151617 70%, #0c0d0e 100%);
+  border: 1px solid rgba(181, 172, 160, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.6),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  display: flex;
+  height: clamp(8.5rem, 13vw, 11rem);
+  justify-content: center;
+  width: clamp(8.5rem, 13vw, 11rem);
+}
+
+.clockFace {
+  align-items: center;
+  border: 1px solid rgba(240, 237, 230, 0.12);
+  border-radius: 50%;
+  display: flex;
+  height: 82%;
+  justify-content: center;
+  position: relative;
+  width: 82%;
+}
+
+.clockCenterPivot {
+  background: var(--accent-warm);
+  border-radius: 50%;
+  height: 6px;
+  position: absolute;
+  width: 6px;
+  z-index: 4;
+}
+
+.clockHourHand {
+  background: #e2dfd8;
+  height: 32%;
+  left: 50%;
+  position: absolute;
+  top: 22%;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: bottom center;
+  width: 2px;
+  z-index: 2;
+}
+
+.clockMinuteHand {
+  background: var(--accent-warm);
+  height: 42%;
+  left: 50%;
+  position: absolute;
+  top: 10%;
+  transform: translateX(-50%) rotate(165deg);
+  transform-origin: bottom center;
+  width: 1.5px;
+  z-index: 3;
+}
+
+.clockMarkTop,
+.clockMarkRight,
+.clockMarkBottom,
+.clockMarkLeft {
+  background: rgba(240, 237, 230, 0.35);
+  position: absolute;
+}
+
+.clockMarkTop { height: 6px; top: 3px; width: 1.5px; }
+.clockMarkBottom { bottom: 3px; height: 6px; width: 1.5px; }
+.clockMarkLeft { height: 1.5px; left: 3px; width: 6px; }
+.clockMarkRight { height: 1.5px; right: 3px; width: 6px; }
+
+.clockLabel {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+
+.bookSlotFocal {
+  background: rgba(26, 27, 29, 0.95);
+  border: 1px solid rgba(195, 185, 170, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.9rem 1.25rem;
+  position: absolute;
+  right: clamp(2rem, 12vw, 9rem);
+  bottom: 22%;
+  transform-style: preserve-3d;
+  width: clamp(9.5rem, 14vw, 12rem);
+}
+
+.bookFocalHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookFocalTag {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.bookFocalDot {
+  background: var(--accent-warm);
+  border-radius: 50%;
+  height: 4px;
+  width: 4px;
+}
+
+.bookFocalTime {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.bookFocalStatus {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+}
+
+.bookConfirmCard {
+  background: rgba(20, 21, 22, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  left: 8%;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  bottom: 8%;
+  transform-style: preserve-3d;
+}
+
+.bookConfirmHeader {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bookConfirmTag {
+  color: var(--accent-warm);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+
+.bookConfirmCheck {
+  color: var(--accent-warm);
+  font-size: 0.75rem;
+}
+
+.bookConfirmDetail {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+
+.bookActionStrip {
+  align-items: center;
+  background: #151617;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  position: absolute;
+  right: 6%;
+  bottom: 6%;
+  transform-style: preserve-3d;
+}
+
+.bookActionLabel {
+  color: var(--paper);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+}
+
+.bookActionArrow {
+  color: var(--accent-warm);
+}
+
+/* ==================================================
+   7. BUILT AROUND YOUR BUSINESS (VALUE SECTION)
+   ================================================== */
+.valueSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 60svh;
+  padding: clamp(4.5rem, 8vh, 7rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.valueContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.valueBody {
+  transform-style: preserve-3d;
+}
+
+.valueTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-serif), Georgia, serif;
+  font-size: clamp(2.8rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+}
+
+.valueLineOne,
+.valueLineTwo {
+  display: block;
+}
+
+.valueLineTwo {
+  color: var(--accent-warm);
+  margin-left: clamp(0.5rem, 5vw, 5rem);
+  margin-top: 0.12em;
+}
+
+.valueStatement {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-sans), system-ui, sans-serif;
+  font-size: clamp(1rem, 1.35vw, 1.4rem);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 44ch;
+}
+
+/* ==================================================
+   8. FINAL CTA
+   ================================================== */
+.ctaSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 52svh;
+  padding: clamp(4.5rem, 8vh, 6.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.ctaContent {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.ctaHead {
+  flex: 1;
+  min-width: 280px;
+}
+
+.ctaTitle {
+  color: var(--paper);
+  font-family: var(--font-editorial-serif), Georgia, serif;
+  font-size: clamp(2.6rem, 7vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+}
+
+.ctaLineOne,
+.ctaLineTwo {
+  display: block;
+}
+
+.ctaCopy {
+  color: var(--text-secondary);
+  font-family: var(--font-editorial-sans), system-ui, sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  font-weight: 300;
+  margin: 0;
+}
+
+.ctaActionRow {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.ctaEditorialLink {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--paper);
+  display: inline-flex;
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: clamp(0.72rem, 0.85vw, 0.88rem);
+  gap: 0.85rem;
+  letter-spacing: 0.16em;
+  padding: 1rem 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.ctaEditorialLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--paper);
+  transform: translateY(-2px);
+}
+
+.ctaArrow {
+  color: var(--accent-warm);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.ctaEditorialLink:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ==================================================
+   9. MINIMAL FOOTER
+   ================================================== */
+.footer {
+  border-top: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  padding: 2.5rem clamp(1.5rem, 5vw, 4.5rem);
+  width: 100%;
+}
+
+.footerNav {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.footerLink {
+  color: var(--text-muted);
+  font-family: var(--font-editorial-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--paper);
+}
+
+.footerDivider {
+  color: var(--hairline);
+  font-size: 0.8rem;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN SYSTEM
+   ================================================== */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+  .coversContainer {
+    height: 340vh;
+  }
+
+  .coversStage {
+    height: clamp(520px, 82vh, 760px);
+  }
+
+  .serviceCover {
+    padding: 2rem 2.2rem;
+    width: 92vw;
+  }
+
+  .coverBody {
+    gap: 2rem;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.2fr);
+  }
+
+  .coverTitle {
+    font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  }
+
+  .restPlate {
+    right: 2rem;
+  }
+
+  .restFork {
+    right: clamp(14rem, 24vw, 18rem);
+  }
+}
+
+/* Mobile (768px and below) — Recomposed Vertically, Zero Congestion */
+@media (max-width: 768px) {
+  .header {
+    left: 1.25rem;
+    padding: 1.15rem 0;
+    right: 1.25rem;
+  }
+
+  .heroSection {
+    min-height: 80svh;
+    padding: 5rem 1.25rem 2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(3rem, 13vw, 4.8rem);
+    letter-spacing: -0.035em;
+  }
+
+  .heroTitleLine2 {
+    margin-left: 0.5rem;
+  }
+
+  .transitionSection {
+    min-height: 52svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .transitionTitle {
+    font-size: clamp(2.4rem, 10.5vw, 3.8rem);
+  }
+
+  .transitionLineTwo {
+    margin-left: 0.5rem;
+  }
+
+  .coversContainer {
+    height: 280vh;
+  }
+
+  .coversStage {
+    height: clamp(480px, 82vh, 640px);
+    top: 3.8rem;
+  }
+
+  .serviceCover {
+    border-radius: 6px;
+    padding: 1.25rem 1.15rem;
+    width: 92vw;
+  }
+
+  .coverHeader {
+    padding-bottom: 0.65rem;
+  }
+
+  .coverBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: space-between;
+    padding: 0.65rem 0;
+  }
+
+  .coverTextCol {
+    max-width: 100%;
+  }
+
+  .coverTitle {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    line-height: 0.95;
+  }
+
+  .coverDescriptor {
+    font-size: 0.68rem;
+    margin-top: 0.6rem;
+  }
+
+  .coverStatement {
+    display: none; /* Keep mobile covers uncongested */
+  }
+
+  .coverVisualCol {
+    height: clamp(13rem, 30vh, 16rem);
+    width: 100%;
+  }
+
+  /* Mobile Artwork Simplification */
+  .restaurantVisualContainer,
+  .businessVisualContainer,
+  .commerceVisualContainer,
+  .bookingVisualContainer {
+    height: 100%;
+  }
+
+  /* Restaurant mobile: plate + fork + spoon + reservation strip */
+  .restPlate {
+    height: 10.5rem;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 10.5rem;
+  }
+
+  .restFork {
+    height: 8rem;
+    right: calc(50% + 5.5rem);
+    transform: translateY(-50%);
+  }
+
+  .restSpoon {
+    height: 8rem;
+    right: calc(50% - 6.5rem);
+    transform: translateY(-50%);
+  }
+
+  .restCategoryRail,
+  .restStripPrimary,
+  .restChefSpecial {
+    display: none; /* Hide dense clutter on mobile */
+  }
+
+  .restActionStrip {
+    bottom: 2%;
+    left: 50%;
+    padding: 0.5rem 0.85rem;
+    transform: translateX(-50%);
+  }
+
+  /* Business mobile: main board + secondary slab + inquiry detail */
+  .bizBoardMain {
+    left: 50%;
+    padding: 0.85rem 1rem;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 88%;
+  }
+
+  .bizBoardSecondary {
+    display: none;
+  }
+
+  .bizActionStrip {
+    bottom: 2%;
+    left: 50%;
+    padding: 0.5rem 0.85rem;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  /* Commerce mobile: main product box + shopping bag + checkout detail */
+  .shopPlinth,
+  .shopBoxSecondary,
+  .shopCartPlane {
+    display: none;
+  }
+
+  .shopBoxPrimary {
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 11rem;
+  }
+
+  .shopBag {
+    display: none;
+  }
+
+  .shopActionStrip {
+    bottom: 2%;
+    left: 50%;
+    padding: 0.5rem 0.85rem;
+    transform: translateX(-50%);
+  }
+
+  /* Booking mobile: calendar + clock + confirmation */
+  .bookCalPlane {
+    display: none;
+  }
+
+  .bookClock {
+    left: 50%;
+    right: auto;
+    top: 45%;
+    transform: translate(-50%, -60%);
+  }
+
+  .clockBezel {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+
+  .bookSlotFocal,
+  .bookConfirmCard {
+    display: none;
+  }
+
+  .bookActionStrip {
+    bottom: 2%;
+    left: 50%;
+    padding: 0.5rem 0.85rem;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .coverFoot {
+    padding-top: 0.65rem;
+  }
+
+  .valueSection {
+    min-height: 52svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .valueTitle {
+    font-size: clamp(2.4rem, 10.5vw, 3.8rem);
+  }
+
+  .ctaSection {
+    min-height: 48svh;
+    padding: 3.5rem 1.25rem;
+  }
+
+  .ctaTitle {
+    font-size: clamp(2.2rem, 9.5vw, 3.4rem);
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .coversContainer {
+    height: auto;
+  }
+
+  .coversStage {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    position: static;
+  }
+
+  .serviceCover {
+    opacity: 1 !important;
+    position: relative;
+    top: auto;
+    transform: none !important;
+  }
+}

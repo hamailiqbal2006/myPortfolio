@@ -1,0 +1,1851 @@
+@charset "UTF-8";
+
+/* ==================================================
+   SHOPIFY DEVELOPMENT SHOWROOM — EDITORIAL PORTFOLIO SYSTEM
+   Commerce-focused identity, physical 3D objects,
+   crisp 2D text architecture, and warm neutral darks.
+   ================================================== */
+.page {
+  --bg: #080909;
+  --paper: #f4f3ee;
+  --text-secondary: rgba(244, 243, 238, 0.72);
+  --text-muted: rgba(244, 243, 238, 0.45);
+  --hairline: rgba(242, 240, 234, 0.14);
+  --hairline-subtle: rgba(242, 240, 234, 0.08);
+
+  /* Surface Hierarchy */
+  --surface-base: #121313;
+  --surface-raised: #181919;
+  --surface-deep: #0c0d0d;
+
+  /* Material Accents */
+  --mat-warm-stone: #c8beb0;
+  --mat-forest-subtle: #4e6550;
+  --mat-paper: #dcd8cf;
+  --mat-steel: #b5b9be;
+
+  background: var(--bg);
+  box-sizing: border-box;
+  color: var(--paper);
+  min-height: 100vh;
+  overflow-x: clip;
+  position: relative;
+  width: 100%;
+}
+
+/* ==================================================
+   1. HERO SECTION (Homepage-Style Full-Viewport Opening)
+   ================================================== */
+.heroSection {
+  align-items: center;
+  background: #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: center;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: 0 clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+.heroSection::before {
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.045), transparent 45%);
+  content: '';
+  inset: -16%;
+  pointer-events: none;
+  position: absolute;
+}
+
+.heroStage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  min-height: 100svh;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.heroIdentity {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.heroEyebrow {
+  color: var(--paper);
+  font-size: clamp(0.7rem, 0.82vw, 0.88rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  margin: 0 0 clamp(0.9rem, 1.4vw, 1.4rem);
+  opacity: 0.54;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  align-items: center;
+  color: #f4f3ee;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  font-size: clamp(4rem, 13.5vw, 15.5rem);
+  font-weight: 700;
+  letter-spacing: -0.072em;
+  line-height: 0.78;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.heroTitleLine1,
+.heroTitleLine2 {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.heroTitleLine2 {
+  color: #f4f3ee;
+  margin-top: 0.04em;
+}
+
+.heroCopy {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(0.72rem, 0.85vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  margin: clamp(1.2rem, 2vw, 1.85rem) 0 0;
+  max-width: 34rem;
+  opacity: 0.72;
+  text-align: center;
+  text-transform: uppercase;
+  will-change: transform, opacity;
+}
+
+/* ==================================================
+   2. TRANSITION SECTION (BUILT FOR COMMERCE)
+   ================================================== */
+.transitionSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 55svh;
+  padding: clamp(3.5rem, 6vh, 5.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.transitionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.transitionBody {
+  transform-style: preserve-3d;
+}
+
+.transitionTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3rem, 8.5vw, 7.5rem);
+  font-weight: 650;
+  letter-spacing: -0.062em;
+  line-height: 0.84;
+  margin: 0 0 0 -0.04em;
+  text-transform: uppercase;
+}
+
+.transitionLineOne,
+.transitionLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.transitionLineTwo {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.transitionStatement {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.1vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin: clamp(1.2rem, 2vh, 1.8rem) 0 0;
+  max-width: 32rem;
+}
+
+.transitionRule {
+  background: linear-gradient(90deg, var(--hairline), transparent 60%);
+  height: 1px;
+  margin-top: clamp(2rem, 3.5vw, 3.5rem);
+  width: 100%;
+}
+
+/* ==================================================
+   3. FULL-VIEWPORT SERVICE COVERS SEQUENCE
+   ================================================== */
+.coversContainer {
+  height: 100svh;
+  min-height: 100svh;
+  position: relative;
+  width: 100%;
+}
+
+.coversStage {
+  align-items: center;
+  display: flex;
+  height: 100svh;
+  justify-content: center;
+  left: 0;
+  min-height: 100svh;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  isolation: isolate;
+  width: 100%;
+}
+
+.serviceCover {
+  backface-visibility: hidden;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: space-between;
+  left: 0;
+  min-height: 100svh;
+  overflow: visible;
+  padding: clamp(2.5rem, 5vh, 4.5rem) clamp(2.5rem, 6vw, 6.5rem);
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 50%;
+  width: 100%;
+  will-change: transform;
+}
+
+/* Editorial Cover Header */
+.coverHeader {
+  align-items: center;
+  border-bottom: none;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  padding-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+  width: 100%;
+  z-index: 10;
+}
+
+.coverTag {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(0.68rem, 0.8vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  opacity: 0.58;
+  text-transform: uppercase;
+}
+
+.coverTagSub {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: clamp(0.68rem, 0.8vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+/* Internal Editorial Grid (40% Text / 60% Artwork) */
+.coverBody {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  gap: clamp(2rem, 4vw, 5rem);
+  grid-template-columns: 40% 60%;
+  min-height: 0;
+  padding: clamp(1rem, 2vh, 2rem) 0;
+  transform-style: preserve-3d;
+  width: 100%;
+  z-index: 5;
+}
+
+/* ==================================================
+   TEXT CONTENT LAYER (CRISP 2D ARCHITECTURE)
+   Strictly 2D, zero transform to prevent blur.
+   ================================================== */
+.coverTextCol {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  text-rendering: optimizeLegibility;
+  transform: none !important;
+  transform-style: flat;
+}
+
+.coverTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3.8rem, 6.2vw, 7.5rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.84;
+  margin: 0 0 0 -0.035em;
+  text-transform: uppercase;
+}
+
+.coverTitle span {
+  display: block;
+}
+
+.titlePrimary {
+  color: var(--paper);
+}
+
+.titleSecondary {
+  color: rgba(244, 243, 238, 0.82);
+  margin-top: 0.1em;
+}
+
+.coverStatement {
+  color: rgba(244, 243, 238, 0.72);
+  font-family: inherit;
+  font-size: clamp(1rem, 1.15vw, 1.25rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.48;
+  margin: clamp(1.2rem, 2vh, 1.75rem) 0 0;
+  max-width: clamp(26rem, 30vw, 34rem);
+}
+
+/* Deliverables Grid */
+.deliverablesList {
+  border-top: 1px solid var(--hairline-subtle);
+  display: grid;
+  gap: clamp(0.75rem, 1.5vh, 1.15rem) clamp(1.25rem, 2.5vw, 2.25rem);
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: clamp(1.25rem, 2.5vh, 2rem);
+  max-width: clamp(28rem, 32vw, 36rem);
+  padding-top: clamp(1rem, 1.8vh, 1.4rem);
+}
+
+.deliverableItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.deliverableLabel {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(0.74rem, 0.8vw, 0.86rem);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.deliverableDesc {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: clamp(0.75rem, 0.82vw, 0.88rem);
+  font-weight: 450;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+/* Cover Action Link */
+.coverActionWrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(1.4rem, 2.8vh, 2.2rem);
+}
+
+.editorialActionLink {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.45);
+  color: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: clamp(0.82rem, 0.9vw, 0.96rem);
+  font-weight: 650;
+  gap: 1.25rem;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.45rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: gap 0.3s ease, border-color 0.25s ease;
+  width: fit-content;
+}
+
+.editorialActionLink:hover {
+  border-color: var(--paper);
+  gap: 1.75rem;
+}
+
+/* ==================================================
+   ARTWORK 3D LAYER (Columns 60%)
+   ================================================== */
+.coverVisualCol {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+/* ==================================================
+   COVER SURFACES (EDITORIAL COMMERCE TEXTURE)
+   ================================================== */
+.storefrontCover {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(185, 180, 170, 0.08), transparent 65%),
+    linear-gradient(155deg, #151515 0%, #111111 55%, #0d0d0d 100%);
+}
+
+.productsCover {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(78, 101, 80, 0.09), transparent 65%),
+    linear-gradient(155deg, #141614 0%, #111211 55%, #0d0e0d 100%);
+}
+
+.checkoutCover {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(180, 185, 190, 0.07), transparent 65%),
+    linear-gradient(155deg, #131415 0%, #101112 55%, #0d0e0f 100%);
+}
+
+.operationsCover {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(195, 180, 160, 0.07), transparent 65%),
+    linear-gradient(155deg, #151413 0%, #121110 55%, #0e0d0c 100%);
+}
+
+/* ==================================================
+   SCENE 1: STOREFRONT & THEME ARTWORK
+   ================================================== */
+.storefrontVisualContainer {
+  box-sizing: border-box;
+  height: clamp(24rem, 55vh, 38rem);
+  perspective: 950px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.storeRail {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  color: var(--text-muted);
+  display: flex;
+  font-family: inherit;
+  font-size: clamp(0.64rem, 0.72vw, 0.76rem);
+  font-weight: 600;
+  gap: 0.75rem;
+  letter-spacing: 0.16em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+.railDot {
+  color: var(--mat-forest-subtle);
+}
+
+/* Secondary Background Collection Sheet */
+.storeSheetSecondary {
+  background: linear-gradient(160deg, #1b1c1c 0%, #141515 100%);
+  border: 1px solid rgba(242, 240, 234, 0.09);
+  border-radius: 4px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
+  height: clamp(18rem, 25vw, 24rem);
+  left: 12%;
+  padding: 1.5rem;
+  position: absolute;
+  top: 10%;
+  transform-style: preserve-3d;
+  width: clamp(18rem, 24vw, 23rem);
+}
+
+.storeSheetHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.storeSheetSeason {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.storeSheetIndex {
+  color: var(--mat-forest-subtle);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.storeSheetMediaGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.25rem;
+}
+
+.storeSheetMediaBox {
+  background: #111212;
+  border: 1px solid rgba(242, 240, 234, 0.06);
+  border-radius: 3px;
+  height: 6rem;
+  position: relative;
+}
+
+.storeSheetMediaBox::after {
+  background: linear-gradient(135deg, rgba(242, 240, 234, 0.04), transparent);
+  content: '';
+  inset: 0;
+  position: absolute;
+}
+
+/* Primary Storefront Presentation Plane */
+.storePlaneMain {
+  background: linear-gradient(165deg, #222324 0%, #181919 60%, #121313 100%);
+  border: 1px solid rgba(242, 240, 234, 0.14);
+  border-radius: 6px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: clamp(22rem, 30vw, 29rem);
+  left: 50%;
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(24rem, 32vw, 32rem);
+}
+
+.storePlaneNavBar {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+}
+
+.storePlaneBrand {
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.storePlaneNavLinks {
+  color: var(--text-muted);
+  display: flex;
+  font-size: 0.64rem;
+  font-weight: 500;
+  gap: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.storePlaneCartBadge {
+  background: rgba(242, 240, 234, 0.08);
+  border: 1px solid rgba(242, 240, 234, 0.12);
+  border-radius: 2px;
+  color: var(--paper);
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
+}
+
+.storePlaneHeroBanner {
+  background: linear-gradient(135deg, #282a2b 0%, #1e1f20 100%);
+  border: 1px solid rgba(242, 240, 234, 0.06);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding: 1.25rem;
+}
+
+.storePlaneBannerTag {
+  color: var(--mat-warm-stone);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.storePlaneBannerTitle {
+  color: var(--paper);
+  font-size: clamp(1rem, 1.3vw, 1.35rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.storePlaneGridTeaser {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.storePlaneGridCard {
+  background: rgba(18, 19, 19, 0.6);
+  border: 1px solid rgba(242, 240, 234, 0.06);
+  border-radius: 3px;
+  height: 4.5rem;
+  padding: 0.65rem;
+}
+
+.storePlaneCardLine {
+  background: rgba(242, 240, 234, 0.15);
+  height: 4px;
+  margin-bottom: 0.35rem;
+  width: 55%;
+}
+
+.storePlaneCardSub {
+  background: rgba(242, 240, 234, 0.08);
+  height: 3px;
+  width: 35%;
+}
+
+/* Foreground Product Feature Card */
+.storeCardForeground {
+  background: linear-gradient(150deg, #262828 0%, #1c1d1e 100%);
+  border: 1px solid rgba(242, 240, 234, 0.18);
+  border-radius: 5px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  padding: 1.25rem 1.4rem;
+  position: absolute;
+  right: 6%;
+  top: 48%;
+  transform-style: preserve-3d;
+  width: clamp(14rem, 18vw, 17rem);
+}
+
+.storeCardTop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.storeCardTag {
+  color: var(--mat-forest-subtle);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.storeCardDot {
+  background: var(--mat-forest-subtle);
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+}
+
+.storeCardTitle {
+  color: var(--paper);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+.storeCardPrice {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ==================================================
+   SCENE 2: PRODUCTS & COLLECTIONS ARTWORK
+   ================================================== */
+.productsVisualContainer {
+  box-sizing: border-box;
+  height: clamp(24rem, 55vh, 38rem);
+  perspective: 950px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.prodRail {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  color: var(--text-muted);
+  display: flex;
+  font-family: inherit;
+  font-size: clamp(0.64rem, 0.72vw, 0.76rem);
+  font-weight: 600;
+  gap: 0.75rem;
+  letter-spacing: 0.16em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+/* Basalt Display Plinth Base */
+.prodPlinth {
+  background: linear-gradient(180deg, #2a2b2c 0%, #181919 100%);
+  border-top: 1px solid rgba(242, 240, 234, 0.22);
+  bottom: 8%;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  height: clamp(2.5rem, 4vh, 3.5rem);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  width: clamp(24rem, 34vw, 34rem);
+}
+
+/* Secondary Product Packaging Block */
+.prodBoxSecondary {
+  background: linear-gradient(160deg, #1e2020 0%, #151616 100%);
+  border: 1px solid rgba(242, 240, 234, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  height: clamp(17rem, 23vw, 22rem);
+  left: 14%;
+  padding: 1.4rem;
+  position: absolute;
+  top: 14%;
+  transform-style: preserve-3d;
+  width: clamp(15rem, 20vw, 19rem);
+}
+
+.prodBoxSecTag {
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.prodBoxSecLine {
+  background: rgba(242, 240, 234, 0.08);
+  height: 2px;
+  margin-top: 1rem;
+  width: 60%;
+}
+
+/* Primary Product Package Hero Anchor */
+.prodBoxPrimary {
+  background: linear-gradient(165deg, #262828 0%, #1a1c1c 60%, #121313 100%);
+  border: 1px solid rgba(242, 240, 234, 0.18);
+  border-radius: 5px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: clamp(20rem, 27vw, 26rem);
+  justify-content: space-between;
+  left: 50%;
+  padding: clamp(1.4rem, 2.2vw, 2rem);
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(20rem, 27vw, 26rem);
+}
+
+.prodBoxPriHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.85rem;
+}
+
+.prodBoxPriTag {
+  color: var(--mat-forest-subtle);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.prodBoxPriStatus {
+  background: rgba(78, 101, 80, 0.15);
+  border: 1px solid rgba(78, 101, 80, 0.35);
+  border-radius: 2px;
+  color: var(--paper);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.prodBoxPriBody {
+  margin: 1.5rem 0;
+}
+
+.prodBoxPriTitle {
+  color: var(--paper);
+  font-size: clamp(1.1rem, 1.4vw, 1.45rem);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.prodBoxPriDesc {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.prodBoxPriFoot {
+  border-top: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+}
+
+.prodBoxPriSpec {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+/* Foreground Variant Merchandising Card */
+.prodVariantCard {
+  background: linear-gradient(150deg, #2b2d2e 0%, #1e2020 100%);
+  border: 1px solid rgba(242, 240, 234, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+  padding: 1.25rem 1.4rem;
+  position: absolute;
+  right: 8%;
+  top: 48%;
+  transform-style: preserve-3d;
+  width: clamp(13rem, 17vw, 16rem);
+}
+
+.prodVariantTop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.prodVariantTag {
+  color: var(--mat-warm-stone);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.prodVariantDot {
+  background: var(--mat-warm-stone);
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+}
+
+.prodSwatchRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.prodSwatch1 {
+  background: #111;
+  border: 1px solid rgba(242, 240, 234, 0.3);
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+
+.prodSwatch2 {
+  background: #757067;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+
+.prodSwatch3 {
+  background: #4e6550;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+
+.prodSizeRow {
+  color: var(--text-muted);
+  display: flex;
+  font-size: 0.68rem;
+  font-weight: 600;
+  gap: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+/* ==================================================
+   SCENE 3: CART & CHECKOUT ARTWORK
+   ================================================== */
+.checkoutVisualContainer {
+  box-sizing: border-box;
+  height: clamp(24rem, 55vh, 38rem);
+  perspective: 950px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.checkoutRail {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  color: var(--text-muted);
+  display: flex;
+  font-family: inherit;
+  font-size: clamp(0.64rem, 0.72vw, 0.76rem);
+  font-weight: 600;
+  gap: 0.75rem;
+  letter-spacing: 0.16em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+/* Secondary Order Summary Sheet */
+.cartSheetSecondary {
+  background: linear-gradient(160deg, #1c1d1e 0%, #141516 100%);
+  border: 1px solid rgba(242, 240, 234, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  height: clamp(17rem, 23vw, 22rem);
+  left: 10%;
+  padding: 1.5rem;
+  position: absolute;
+  top: 15%;
+  transform-style: preserve-3d;
+  width: clamp(16rem, 21vw, 20rem);
+}
+
+.cartSheetTitle {
+  color: var(--text-muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.cartSheetRow {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.06);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+
+.cartSheetItemName {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+}
+
+.cartSheetItemPrice {
+  color: var(--paper);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+/* Physical Structured Shopping Bag Form */
+.cartBagPrimary {
+  background: linear-gradient(165deg, #252627 0%, #1a1b1c 60%, #131415 100%);
+  border: 1px solid rgba(242, 240, 234, 0.16);
+  border-radius: 4px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: clamp(21rem, 28vw, 27rem);
+  justify-content: space-between;
+  left: 48%;
+  padding: clamp(1.4rem, 2vw, 1.8rem);
+  position: absolute;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(18rem, 25vw, 24rem);
+}
+
+.cartBagHandle {
+  align-self: center;
+  border: 2px solid rgba(242, 240, 234, 0.35);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  height: 2.75rem;
+  margin-top: -2.75rem;
+  width: 4rem;
+}
+
+.cartBagHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.cartBagTag {
+  color: var(--mat-forest-subtle);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cartBagCount {
+  background: rgba(242, 240, 234, 0.08);
+  border-radius: 2px;
+  color: var(--paper);
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
+}
+
+.cartBagBody {
+  margin: 1.5rem 0;
+}
+
+.cartBagTitle {
+  color: var(--paper);
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.cartBagSub {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.cartBagFoot {
+  border-top: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+
+.cartBagTotalLabel {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+.cartBagTotalVal {
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+/* Foreground Payment / Checkout Slab */
+.cartCheckoutCard {
+  background: linear-gradient(150deg, #292b2c 0%, #1d1e1f 100%);
+  border: 1px solid rgba(242, 240, 234, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  padding: 1.3rem 1.5rem;
+  position: absolute;
+  right: 6%;
+  top: 46%;
+  transform-style: preserve-3d;
+  width: clamp(14rem, 18vw, 17rem);
+}
+
+.checkoutCardTop {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.checkoutCardChip {
+  background: linear-gradient(135deg, #9e8c76 0%, #7d6e5d 100%);
+  border-radius: 2px;
+  height: 16px;
+  width: 22px;
+}
+
+.checkoutCardType {
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.checkoutCardDigits {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.75rem;
+}
+
+.checkoutCardAction {
+  color: var(--mat-forest-subtle);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Shipping / Dispatch Tag */
+.cartReceiptTag {
+  background: #191a1a;
+  border: 1px dashed rgba(242, 240, 234, 0.18);
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0.6rem 0.85rem;
+  position: absolute;
+  right: 18%;
+  top: 20%;
+  transform-style: preserve-3d;
+  width: 9rem;
+}
+
+.cartReceiptText {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   SCENE 4: STORE OPERATIONS ARTWORK
+   ================================================== */
+.operationsVisualContainer {
+  box-sizing: border-box;
+  height: clamp(24rem, 55vh, 38rem);
+  perspective: 950px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.opsRail {
+  align-items: center;
+  border-bottom: 1px solid var(--hairline-subtle);
+  color: var(--text-muted);
+  display: flex;
+  font-family: inherit;
+  font-size: clamp(0.64rem, 0.72vw, 0.76rem);
+  font-weight: 600;
+  gap: 0.75rem;
+  letter-spacing: 0.16em;
+  padding-bottom: 0.45rem;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+}
+
+/* Secondary Inventory Stack */
+.opsInventoryStack {
+  background: linear-gradient(160deg, #1b1c1d 0%, #131414 100%);
+  border: 1px solid rgba(242, 240, 234, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  height: clamp(17rem, 23vw, 22rem);
+  left: 11%;
+  padding: 1.5rem;
+  position: absolute;
+  top: 14%;
+  transform-style: preserve-3d;
+  width: clamp(16rem, 21vw, 20rem);
+}
+
+.opsInvTitle {
+  color: var(--text-muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.opsInvRow {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.06);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+}
+
+.opsInvSku {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.opsInvStock {
+  background: rgba(242, 240, 234, 0.08);
+  border-radius: 2px;
+  color: var(--paper);
+  font-size: 0.64rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+}
+
+/* Primary Smoked Graphite Order Ticket Board */
+.opsBoardPrimary {
+  background: linear-gradient(165deg, #242526 0%, #191a1a 60%, #111212 100%);
+  border: 1px solid rgba(242, 240, 234, 0.16);
+  border-radius: 5px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: clamp(21rem, 28vw, 27rem);
+  justify-content: space-between;
+  left: 50%;
+  padding: clamp(1.4rem, 2vw, 1.8rem);
+  position: absolute;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: clamp(22rem, 29vw, 28rem);
+}
+
+.opsBoardHeader {
+  align-items: center;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.opsBoardTag {
+  color: var(--mat-forest-subtle);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.opsBoardTime {
+  color: var(--text-muted);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+}
+
+.opsBoardSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+.opsStepItem {
+  align-items: center;
+  background: rgba(18, 19, 19, 0.5);
+  border: 1px solid rgba(242, 240, 234, 0.06);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+}
+
+.opsStepIndex {
+  color: var(--mat-forest-subtle);
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-right: 0.75rem;
+}
+
+.opsStepLabel {
+  color: var(--paper);
+  flex: 1;
+  font-size: 0.76rem;
+  font-weight: 550;
+  text-transform: uppercase;
+}
+
+.opsStepState {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+.opsBoardFoot {
+  border-top: 1px solid rgba(242, 240, 234, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+
+.opsBoardSync {
+  color: var(--text-muted);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+}
+
+/* Foreground Fulfilment / Dispatch Slip */
+.opsShippingSlip {
+  background: linear-gradient(150deg, #2b2c2d 0%, #1e1f1f 100%);
+  border: 1px solid rgba(242, 240, 234, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  padding: 1.25rem 1.4rem;
+  position: absolute;
+  right: 6%;
+  top: 46%;
+  transform-style: preserve-3d;
+  width: clamp(14rem, 18vw, 17rem);
+}
+
+.opsSlipHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.opsSlipTag {
+  color: var(--mat-warm-stone);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.opsSlipStatus {
+  background: rgba(78, 101, 80, 0.2);
+  border-radius: 2px;
+  color: var(--paper);
+  font-size: 0.58rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+}
+
+.opsSlipBarcode {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(242, 240, 234, 0.5) 0,
+    rgba(242, 240, 234, 0.5) 2px,
+    transparent 2px,
+    transparent 4px,
+    rgba(242, 240, 234, 0.5) 4px,
+    rgba(242, 240, 234, 0.5) 7px,
+    transparent 7px,
+    transparent 9px
+  );
+  height: 24px;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+
+.opsSlipDetail {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+/* Compact Integration Sync Block */
+.opsIntegrationWidget {
+  background: #1a1b1b;
+  border: 1px solid rgba(242, 240, 234, 0.12);
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 0.55rem 0.8rem;
+  position: absolute;
+  right: 16%;
+  top: 22%;
+  transform-style: preserve-3d;
+  width: 8.5rem;
+}
+
+.opsWidgetText {
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   7. BUILT FOR SELLING SECTION
+   ================================================== */
+.sellingSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 70svh;
+  padding: clamp(5rem, 10vh, 8.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.sellingContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.sellingBody {
+  transform-style: preserve-3d;
+}
+
+.sellingTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(3.2rem, 9vw, 8rem);
+  font-weight: 650;
+  letter-spacing: -0.062em;
+  line-height: 0.84;
+  margin: 0 0 0 -0.04em;
+  text-transform: uppercase;
+}
+
+.sellingLineOne,
+.sellingLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.sellingLineTwo {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.sellingStatement {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(1rem, 1.25vw, 1.35rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.5;
+  margin: clamp(1.6rem, 3vh, 2.5rem) 0 0;
+  max-width: 36rem;
+}
+
+/* ==================================================
+   8. FINAL CTA
+   ================================================== */
+.ctaSection {
+  align-items: center;
+  border-top: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  display: flex;
+  min-height: 60svh;
+  padding: clamp(5rem, 8vh, 7.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.ctaHead {
+  transform-style: preserve-3d;
+}
+
+.ctaTitle {
+  color: var(--paper);
+  font-family: inherit;
+  font-size: clamp(2.8rem, 7.5vw, 6.8rem);
+  font-weight: 650;
+  letter-spacing: -0.058em;
+  line-height: 0.86;
+  margin: 0 0 0 -0.035em;
+  text-transform: uppercase;
+}
+
+.ctaLineOne,
+.ctaLineTwo {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.ctaLineTwo {
+  color: var(--paper);
+  margin-top: 0.08em;
+}
+
+.ctaCopy {
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.15vw, 1.22rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.48;
+  margin: clamp(1.4rem, 2.5vh, 2rem) 0 0;
+  max-width: 32rem;
+}
+
+.ctaActionRow {
+  margin-top: clamp(2rem, 3.5vh, 3rem);
+}
+
+.ctaEditorialLink {
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.5);
+  color: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: clamp(0.85rem, 0.95vw, 1.05rem);
+  font-weight: 650;
+  gap: 1.25rem;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: gap 0.3s ease, border-color 0.25s ease;
+  width: fit-content;
+}
+
+.ctaEditorialLink:hover {
+  border-color: var(--paper);
+  gap: 1.85rem;
+}
+
+.ctaArrow {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.ctaEditorialLink:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* ==================================================
+   9. MINIMAL EDITORIAL FOOTER
+   ================================================== */
+.footer {
+  border-top: 1px solid var(--hairline-subtle);
+  box-sizing: border-box;
+  padding: clamp(1.8rem, 3vh, 2.5rem) clamp(1.5rem, 5vw, 4.5rem);
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.footerInner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.footerCopyright {
+  color: var(--paper);
+  display: inline-block;
+  font-family: inherit;
+  font-size: clamp(0.68rem, 0.74vw, 0.75rem);
+  font-weight: 450;
+  letter-spacing: 0.06em;
+  opacity: 0.45;
+  text-transform: none;
+}
+
+.footerNav {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.footerNavLink {
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: clamp(0.68rem, 0.76vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.footerNavLink:hover {
+  color: var(--paper);
+}
+
+/* ==================================================
+   RESPONSIVE — TABLET (<=1024px)
+   ================================================== */
+@media (max-width: 1024px) {
+  .storefrontVisualContainer,
+  .productsVisualContainer,
+  .checkoutVisualContainer,
+  .operationsVisualContainer {
+    perspective: 1100px;
+  }
+
+  .coverBody {
+    gap: 2rem;
+    grid-template-columns: 45% 55%;
+  }
+
+  .storePlaneMain,
+  .prodBoxPrimary,
+  .cartBagPrimary,
+  .opsBoardPrimary {
+    width: 90%;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — MOBILE (<=768px)
+   ================================================== */
+@media (max-width: 768px) {
+  .storefrontVisualContainer,
+  .productsVisualContainer,
+  .checkoutVisualContainer,
+  .operationsVisualContainer {
+    height: 48vh;
+    perspective: 1250px;
+  }
+
+  .serviceCover {
+    justify-content: flex-start;
+    padding: clamp(1.5rem, 3vh, 2.2rem) clamp(1.2rem, 4vw, 2rem);
+  }
+
+  .coverBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .coverTextCol {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .coverTitle {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+  }
+
+  .coverStatement {
+    font-size: 0.92rem;
+    margin-top: 0.75rem;
+    max-width: 100%;
+  }
+
+  .deliverablesList {
+    gap: 0.6rem 1rem;
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+  }
+
+  .coverActionWrap {
+    margin-top: 1rem;
+  }
+
+  .coverVisualCol {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .storeSheetSecondary,
+  .prodBoxSecondary,
+  .cartSheetSecondary,
+  .opsInventoryStack {
+    display: none;
+  }
+
+  .storePlaneMain {
+    height: 16rem;
+    width: 94%;
+  }
+
+  .storeCardForeground {
+    bottom: 5%;
+    right: 2%;
+    top: auto;
+    width: 11rem;
+  }
+
+  .prodPlinth {
+    bottom: 5%;
+    width: 90%;
+  }
+
+  .prodBoxPrimary {
+    height: 15rem;
+    width: 86%;
+  }
+
+  .prodVariantCard {
+    bottom: 6%;
+    right: 3%;
+    top: auto;
+    width: 11rem;
+  }
+
+  .cartBagPrimary {
+    height: 16rem;
+    width: 86%;
+  }
+
+  .cartCheckoutCard {
+    bottom: 5%;
+    right: 3%;
+    top: auto;
+    width: 11.5rem;
+  }
+
+  .cartReceiptTag {
+    display: none;
+  }
+
+  .opsBoardPrimary {
+    height: 16rem;
+    width: 90%;
+  }
+
+  .opsShippingSlip {
+    bottom: 5%;
+    right: 3%;
+    top: auto;
+    width: 11.5rem;
+  }
+
+  .opsIntegrationWidget {
+    display: none;
+  }
+
+  .footerInner {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+}
+
+/* ==================================================
+   REDUCED MOTION
+   ================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .heroSection,
+  .transitionSection,
+  .serviceCover,
+  .storefrontVisualContainer,
+  .productsVisualContainer,
+  .checkoutVisualContainer,
+  .operationsVisualContainer,
+  .sellingSection,
+  .ctaSection {
+    transform: none !important;
+  }
+
+  .coversContainer {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .coversStage {
+    height: auto !important;
+    position: relative !important;
+  }
+
+  .serviceCover {
+    height: auto !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    top: auto !important;
+  }
+}
